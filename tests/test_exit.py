@@ -272,9 +272,9 @@ class Cli(unittest.TestCase):
 
 class SkillDoc(unittest.TestCase):
     def test_skill_md(self):
-        with open(os.path.join(ROOT, "trader-exit", "SKILL.md"), encoding="utf-8") as fh:
+        with open(os.path.join(ROOT, "trader-exit", "references", "upstream-SKILL.md"), encoding="utf-8") as fh:
             text = fh.read()
-        with open(os.path.join(ROOT, "trader-risk", "SKILL.md"), encoding="utf-8") as fh:
+        with open(os.path.join(ROOT, "trader-risk", "references", "upstream-SKILL.md"), encoding="utf-8") as fh:
             risk = fh.read()
         self.assertTrue(text.startswith("---\nname: trader-exit\n"))
         self.assertGreater(len(text.splitlines()), 60)

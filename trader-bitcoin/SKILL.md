@@ -12,7 +12,7 @@ For a current descriptive snapshot, run `python scripts/market.py --interval 5m 
 For the chart use [TradingView BINANCE:BTCUSDT](https://www.tradingview.com/chart/?symbol=BINANCE%3ABTCUSDT). Keep spot separate from perpetual futures and Ebinex synthetic or settlement quotes. Do not treat descriptive EMA/RSI values as validated entry signals.
 
 
-Use `scripts/backtest.py` for a reproducible, standard-library-only analysis. Bitcoin trades continuously, including weekends. Do not apply NYSE sessions, opening bells, PDT rules, stock sizing or SEC earnings workflows to BTC. The legacy equity folders remain for upstream reference and are not registered by this plugin.
+Use `scripts/backtest.py` for a reproducible, standard-library-only analysis. Bitcoin trades continuously, including weekends. Do not apply NYSE sessions, opening bells, PDT rules, stock sizing or SEC earnings workflows to BTC. All eleven module folders now expose BTC adapters through `btc.py` and are registered by the plugin. Their original stock scripts remain legacy; do not call those scripts for BTC. See [suite map](references/suite.md).
 
 ```
 python scripts/backtest.py --start 2026-04-23 --end 2026-10-23 --cache work/btc-data --out outputs/btc-analysis

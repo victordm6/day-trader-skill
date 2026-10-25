@@ -1,14 +1,14 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "day-trader-skill",
-  "description": "Bitcoin research adaptation of Day Trader",
+  "description": "Integrated Bitcoin research suite",
   "owner": {
     "name": "victordm6"
   },
   "plugins": [
     {
       "name": "day-trader-skill",
-      "description": "Read-only Binance BTCUSDT analysis and continuous 24/7 backtests.",
+      "description": "Eleven integrated BTC spot adapters and research hub; local paper tickets only.",
       "source": "./",
       "category": "productivity",
       "homepage": "https://github.com/victordm6/day-trader-skill"

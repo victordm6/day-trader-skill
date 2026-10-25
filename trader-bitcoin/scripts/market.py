@@ -4,6 +4,7 @@ import argparse
 import datetime as dt
 import json
 import math
+import statistics
 from pathlib import Path
 import urllib.request
 
@@ -45,6 +46,13 @@ def snapshot(interval):
         'last_completed_close_time_utc': dt.datetime.fromtimestamp(int(last[6]) / 1000, dt.timezone.utc).isoformat(),
         'completed_candles': len(bars), 'close': bars[-1][4], 'volume_btc': bars[-1][5],
         'ema9': ema9[-1], 'ema21': ema21[-1], 'rsi14': rsi[-1], 'atr14': atr[-1],
+        'prior20_high': max(b[2] for b in bars[-21:-1]),
+        'volume_ratio_prior20': bars[-1][5]/statistics.mean(b[5] for b in bars[-21:-1]) if sum(b[5] for b in bars[-21:-1]) else None,
+        'sample_first_open': bars[0][1],
+        'sample_return_pct': (bars[-1][4]/bars[0][1]-1)*100,
+        'sample_range_low': min(b[3] for b in bars),
+        'sample_range_high': max(b[2] for b in bars),
+        'sample_bar_log_return_stdev_pct': statistics.stdev(math.log(bars[i][4]/bars[i-1][4]) for i in range(1,len(bars)))*100,
         'chart': 'https://www.tradingview.com/chart/?symbol=BINANCE%3ABTCUSDT',
         'source': BASE + '/klines',
         'limitation': 'Descriptive snapshot of completed candles; not an entry recommendation or streaming feed.',

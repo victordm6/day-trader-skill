@@ -1,7 +1,7 @@
 {
   "name": "day-trader-skill",
-  "description": "Bitcoin BTCUSDT spot research with Binance public data, completed-candle snapshots and reproducible 24/7 backtests. Read-only; no order execution.",
-  "version": "3.0.0",
+  "description": "Eleven integrated Bitcoin adapters plus the BTC research hub: Binance spot analysis, project news, plans, sizing, risk, historical tests, paper tickets and alerts. No live orders.",
+  "version": "4.0.0",
   "author": {
     "name": "Jake Schincariol",
     "url": "https://opusjake.ai"
@@ -17,6 +17,17 @@
     "backtesting"
   ],
   "skills": [
-    "./trader-bitcoin"
+    "./trader-bitcoin",
+    "./trader-scanner",
+    "./trader-news",
+    "./trader-entry",
+    "./trader-exit",
+    "./trader-budget",
+    "./trader-risk",
+    "./trader-broker",
+    "./trader-alerts",
+    "./trader-timemachine",
+    "./trader-analyst",
+    "./trader-pelosi"
   ]
 }

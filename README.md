@@ -25,7 +25,31 @@ O backtest usa arquivos oficiais da Binance com SHA256, verifica cobertura minut
 /plugin install day-trader-skill@day-trader-skill
 ```
 
-O plugin registra somente `trader-bitcoin`. Os onze modulos de acoes dos EUA permanecem como legado, sem conversao automatica para cripto. Veja [documentacao original](README-upstream.md). Para Codex, instale a pasta `trader-bitcoin` como skill.
+O plugin registra **12 skills**: o hub `trader-bitcoin` e os **11 adaptadores BTC**. Cada modulo possui `btc.py` como entrada e compartilha o mesmo motor. Os scripts de acoes e suas instrucoes em `references/upstream-SKILL.md` permanecem como legado. [Mapa dos 11 modulos e limites](trader-bitcoin/references/suite.md).
+
+| Modulo | Funcao no Bitcoin |
+|---|---|
+| trader-scanner | Tendencia, rompimento e volume de BTC em varios intervalos |
+| trader-news | Comunicados oficiais Bitcoin Core com deduplicacao |
+| trader-entry | Fechamento versus nivel informado |
+| trader-exit | Plano spot de entrada, stop e alvo |
+| trader-timemachine | Backtest fixo sobre historico Binance 24/7 |
+| trader-budget | Dimensionamento fracionado BTC com custos |
+| trader-risk | Caixa, risco por operacao/diario e retorno/risco liquido |
+| trader-broker | Ticket local em papel, execucao desativada |
+| trader-alerts | Observacao de stop/alvo com estado persistente |
+| trader-analyst | Retorno, amplitude, volume e volatilidade da amostra |
+| trader-pelosi | Registro de divulgacoes BTC com fonte fornecida, sem rastreamento automatico |
+
+```sh
+python trader-scanner/btc.py --out outputs/btc-scan.json
+python trader-news/btc.py --state outputs/btc-news-state.json --out outputs/btc-news.json
+python trader-analyst/btc.py --interval 1h --out outputs/btc-analysis-snapshot.json
+```
+
+Na primeira consulta, noticias incluem historico do feed e sao marcadas como backlog, nao como noticias recentes. O feed nao cobre todo o mercado. O modulo Pelosi preserva o nome, mas nao presume compras por congressistas ou identifica baleias. O analista descreve mercado, sem balancos de empresas. O broker nao faz ordens nem simula preenchimentos.
+
+Para Codex, instale as pastas das skills desejadas; nenhuma instalacao global e feita por estes comandos.
 
 ## Fluxo integrado de Bitcoin
 
@@ -36,7 +60,7 @@ O tamanho respeita caixa, teto por posicao e perda estimada no stop com custos. 
 Validacao offline:
 
 ```sh
-python -m unittest discover -s tests -p test_bitcoin_workflow.py -v
+python -m unittest discover -s tests -v
 python trader-bitcoin/scripts/backtest.py --self-test
 ```
 

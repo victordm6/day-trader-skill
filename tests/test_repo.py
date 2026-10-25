@@ -49,21 +49,21 @@ class Repo(unittest.TestCase):
             fm, text = frontmatter(os.path.join(ROOT, s, "SKILL.md"))
             self.assertIn("name: %s\n" % s, fm + "\n", s)
             self.assertRegex(fm, r"description: ", s)
-            self.assertGreater(len(fm), 200, "%s description is too thin" % s)
-            self.assertGreater(len(text.splitlines()), 60, s)
+            self.assertIn("Bitcoin", text, s)
+            self.assertTrue(os.path.isfile(os.path.join(ROOT, s, "btc.py")), s)
 
     def test_order_path_skills_carry_the_safety_rule(self):
         for s in ORDER_PATH:
             _, text = frontmatter(os.path.join(ROOT, s, "SKILL.md"))
             low = " ".join(text.lower().split())
-            self.assertIn("not financial advice", low, s)
-            self.assertIn("yes", low, s)
+            self.assertIn("no order is submitted", low, s)
+            self.assertIn("never request credentials", low, s)
 
     def test_plugin_manifest_points_at_the_root_skills(self):
         with open(os.path.join(ROOT, ".claude-plugin", "plugin.json")) as fh:
             plugin = json.load(fh)
         self.assertEqual(plugin["name"], "day-trader-skill")
-        self.assertEqual(plugin["skills"], ["./trader-bitcoin"])
+        self.assertEqual(set(plugin["skills"]), {"./trader-bitcoin"} | {"./"+s for s in SKILLS})
         self.assertEqual(plugin["repository"], "https://github.com/victordm6/day-trader-skill")
         with open(os.path.join(ROOT, ".claude-plugin", "marketplace.json")) as fh:
             market = json.load(fh)
