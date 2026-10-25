@@ -3,6 +3,7 @@
 import argparse
 import datetime as dt
 import json
+import math
 from pathlib import Path
 import urllib.request
 
@@ -19,6 +20,8 @@ def public(path):
 
 
 def snapshot(interval):
+    if interval not in INTERVALS:
+        raise ValueError('Unsupported interval')
     rows = public('/klines?symbol=BTCUSDT&interval=' + interval + '&limit=300')
     # Server time avoids using a locally skewed clock to call a candle closed.
     now = int(public('/time')['serverTime'])
@@ -26,6 +29,14 @@ def snapshot(interval):
     if len(closed) < 100:
         raise ValueError('Insufficient completed candles')
     bars = [(int(r[0]) // 1000, *map(float, r[1:6])) for r in closed]
+    duration = {'1m': 60, '5m': 300, '15m': 900, '1h': 3600}[interval]
+    for i, (t, o, h, l, c, v) in enumerate(bars):
+        if not all(math.isfinite(x) for x in (o,h,l,c,v)) or not 0 < l <= min(o,c) <= max(o,c) <= h or v < 0:
+            raise ValueError('Malformed market candle')
+        if i and t != bars[i-1][0]+duration:
+            raise ValueError('Market candle gap or duplicate')
+    if now-int(closed[-1][6]) > duration*2000:
+        raise ValueError('Stale completed candles')
     ema9, ema21, rsi, atr = indicators(bars)
     last = closed[-1]
     return {

@@ -27,7 +27,20 @@ O backtest usa arquivos oficiais da Binance com SHA256, verifica cobertura minut
 
 O plugin registra somente `trader-bitcoin`. Os onze modulos de acoes dos EUA permanecem como legado, sem conversao automatica para cripto. Veja [documentacao original](README-upstream.md). Para Codex, instale a pasta `trader-bitcoin` como skill.
 
-## Limites
+## Fluxo integrado de Bitcoin
+
+Entrada por nivel fornecido pelo usuario -> plano spot long com stop/alvo -> tamanho fracionado em BTC -> verificacao de risco -> alertas locais de stop/alvo. Instrucoes e comandos em [workflow](trader-bitcoin/references/workflow.md).
+
+O tamanho respeita caixa, teto por posicao e perda estimada no stop com custos. O risco verifica tambem orcamento diario informado e retorno/risco liquido. Alertas sao persistidos para evitar repeticoes, mas cada chamada faz somente uma checagem; acompanhamento continuo requer agendamento separado. Nenhum modulo envia ordens.
+
+Validacao offline:
+
+```sh
+python -m unittest discover -s tests -p test_bitcoin_workflow.py -v
+python trader-bitcoin/scripts/backtest.py --self-test
+```
+
+## Limites de execucao
 
 Somente leitura e simulacao. Nao envia ordens demo ou reais, nao usa credenciais e nao acessa endpoints privados. Nao inclui futuros, alavancagem, scanner de acoes ou regras de sessao NYSE no fluxo de Bitcoin.
 

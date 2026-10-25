@@ -1,9 +1,11 @@
 ---
 name: trader-bitcoin
-description: Analyze BTCUSDT spot history from Binance and backtest fixed Bitcoin rules over continuous 24/7 data. Use for Bitcoin historical analysis, six-month backtests, or research adaptations of trader-entry. Does not execute orders or claim to reproduce Ebinex settlement prices.
+description: Analyze Binance BTCUSDT spot, check completed candles against a level, plan long spot stops and targets, size fractional BTC, check risk budgets, record threshold alerts and backtest 24/7 history. No order execution or Ebinex settlement replication.
 ---
 
 # Bitcoin research adapter
+
+For entry-level checks, stop/target plans, fractional sizing, risk checks and persistent threshold alerts, read [references/workflow.md](references/workflow.md) and use `scripts/workflow.py`. Ask for missing cash/risk limits and entry/stop levels rather than inventing personal trading limits. All amounts are USDT; sizing uses BTC fractions, not whole stock shares. These modules produce local research files and do not send orders. Do not claim a passed risk check validates a strategy.
 
 For a current descriptive snapshot, run `python scripts/market.py --interval 5m --out outputs/btc-snapshot.json` from this skill directory. Supported intervals: 1m, 5m, 15m, 1h. Use completed candles only. Report the source, interval and observation time; do not label a snapshot as a continuous feed. A request for monitoring still needs a duration and scheduling mechanism.
 
