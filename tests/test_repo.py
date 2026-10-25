@@ -26,7 +26,7 @@ def frontmatter(path):
 
 def every_text_file():
     for base, dirs, files in os.walk(ROOT):
-        dirs[:] = [d for d in dirs if d not in (".git", "__pycache__")]
+        dirs[:] = [d for d in dirs if d not in (".git", "__pycache__", "work", "outputs")]
         for f in files:
             if f.endswith((".md", ".py", ".json", ".csv", ".txt", ".xml")) or f == "LICENSE":
                 yield os.path.join(base, f)
@@ -36,11 +36,13 @@ class Repo(unittest.TestCase):
     def test_eleven_skill_folders_at_the_root(self):
         found = sorted(d for d in os.listdir(ROOT)
                        if os.path.isfile(os.path.join(ROOT, d, "SKILL.md")))
-        self.assertEqual(found, sorted(SKILLS))
+        self.assertEqual(found, sorted(SKILLS + ["trader-bitcoin"]))
 
-    def test_root_matches_the_reel(self):
-        root = sorted(d for d in os.listdir(ROOT) if not d.startswith(".git"))
-        self.assertEqual(root, sorted([".claude-plugin", "LICENSE", "README.md", "tests"] + SKILLS))
+    def test_bitcoin_resources_exist(self):
+        for relative in ("trader-bitcoin/SKILL.md", "trader-bitcoin/scripts/market.py",
+                         "trader-bitcoin/scripts/workflow.py", "trader-bitcoin/scripts/backtest.py",
+                         "trader-bitcoin/references/workflow.md", "LICENSE", "README-upstream.md"):
+            self.assertTrue(os.path.isfile(os.path.join(ROOT, relative)), relative)
 
     def test_frontmatter_name_and_description(self):
         for s in SKILLS:
@@ -61,15 +63,15 @@ class Repo(unittest.TestCase):
         with open(os.path.join(ROOT, ".claude-plugin", "plugin.json")) as fh:
             plugin = json.load(fh)
         self.assertEqual(plugin["name"], "day-trader-skill")
-        self.assertEqual(plugin["skills"], "./")
-        self.assertEqual(plugin["description"], ABOUT)
+        self.assertEqual(plugin["skills"], ["./trader-bitcoin"])
+        self.assertEqual(plugin["repository"], "https://github.com/victordm6/day-trader-skill")
         with open(os.path.join(ROOT, ".claude-plugin", "marketplace.json")) as fh:
             market = json.load(fh)
         self.assertEqual(market["name"], "day-trader-skill")
         self.assertEqual(market["plugins"][0]["name"], "day-trader-skill")
 
     def test_readme_carries_the_reel_copy(self):
-        with open(os.path.join(ROOT, "README.md"), encoding="utf-8") as fh:
+        with open(os.path.join(ROOT, "README-upstream.md"), encoding="utf-8") as fh:
             readme = " ".join(fh.read().split())
         self.assertTrue(readme.startswith("# The Day Trader skill"))
         for line in (ABOUT,

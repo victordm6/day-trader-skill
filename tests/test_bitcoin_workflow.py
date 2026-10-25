@@ -1,6 +1,11 @@
 from pathlib import Path
 import sys
 import unittest
+import random
+import json
+import tempfile
+import io
+from contextlib import redirect_stdout
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]/'trader-bitcoin'/'scripts'))
 import workflow as w
@@ -9,6 +14,60 @@ from unittest.mock import patch
 
 
 class BitcoinWorkflowTests(unittest.TestCase):
+    def test_stop_already_breached_blocks_new_entry(self):
+        ticket = w.size(w.plan(80000,79000,3),1000,10,1000,.00001,11)
+        for price in (78000,79000):
+            with self.subTest(price=price):
+                self.assertEqual(w.risk(ticket,price,1000,10,30,0,1)['verdict'],'BLOCK')
+
+    def test_sizing_rejects_unsupported_and_malformed_plan(self):
+        for changes in ({'symbol':'ETHUSDT'}, {'side':'short'}, {'venue':'futures'}, {'target':79000}, {'target':float('inf')}):
+            with self.subTest(changes=changes), self.assertRaises(ValueError):
+                w.size(dict(w.plan(80000,79000,3),**changes),1000,10,1000,.00001,11)
+
+    def test_alerts_reject_invalid_thresholds(self):
+        with self.assertRaises(ValueError):
+            w.alerts(dict(w.plan(80000,79000,3), stop=85000),80000,{})
+
+    def test_randomized_sizing_limits(self):
+        rng = random.Random(19)
+        for _ in range(500):
+            entry = rng.uniform(10000,150000)
+            p = w.plan(entry,entry*rng.uniform(.8,.999),3)
+            cash, limit, cap = rng.uniform(20,10000),rng.uniform(1,100),rng.uniform(20,5000)
+            t = w.size(p,cash,limit,cap,.000001,rng.uniform(0,30))
+            self.assertLessEqual(t['estimated_loss_at_stop_usdt'],limit+1e-8)
+            self.assertLessEqual(t['estimated_cash_required_usdt'],cash+1e-8)
+            self.assertLessEqual(t['notional_usdt'],cap+1e-8)
+
+    def test_small_budget_rejected(self):
+        with self.assertRaises(ValueError):
+            w.size(w.plan(80000,79000,3),.01,.01,.01,.001,11)
+
+    def test_target_alert_at_equality_once(self):
+        p = w.plan(80000,79000,3)
+        events,state = w.alerts(p,83000,{})
+        self.assertEqual(events[0]['event'],'target')
+        self.assertEqual(w.alerts(p,84000,json.loads(json.dumps(state)))[0],[])
+
+    def test_cli_plan_size_risk_and_persistent_alerts(self):
+        scratch = Path(__file__).resolve().parents[1]/'work'
+        scratch.mkdir(exist_ok=True)
+        with tempfile.TemporaryDirectory(dir=scratch) as directory:
+            root = Path(directory)
+            def run(args, price=80000):
+                with patch.object(sys,'argv',['workflow.py']+args), patch.object(w,'snapshot',return_value={'close':price}), redirect_stdout(io.StringIO()) as output:
+                    w.main()
+                return json.loads(output.getvalue())
+            planfile,ticketfile,statefile = [str(root/name) for name in ('plan.json','ticket.json','state.json')]
+            run(['--out',planfile,'plan','--entry','80000','--stop','79000','--reward','3'])
+            run(['--out',ticketfile,'size','--plan',planfile,'--cash','1000','--max-loss','10','--cap','900','--step','.00001'])
+            result=run(['risk','--ticket',ticketfile,'--cash','1000','--max-loss','10','--daily-limit','30','--daily-used','0','--min-rr','1'])
+            self.assertEqual(result['verdict'],'PASS')
+            args=['alerts','--plan',planfile,'--state',statefile]
+            self.assertEqual(len(run(args,78000)['events']),1)
+            self.assertEqual(run(args,78000)['events'],[])
+
     def test_fractional_size_respects_all_limits(self):
         p = w.plan(80000, 79000, 2)
         ticket = w.size(p, 1000, 10, 900, .00001, 11)

@@ -21,12 +21,25 @@ def plan(entry, stop, reward):
     entry, stop, reward = map(positive, (entry, stop, reward))
     if stop >= entry:
         raise ValueError('Spot long stop must be below entry')
+    target = positive(entry + reward * (entry-stop))
+    if target <= entry:
+        raise ValueError('Target must exceed entry at numeric precision')
     return {'symbol': 'BTCUSDT', 'venue': 'Binance spot', 'side': 'long',
-            'entry': entry, 'stop': stop, 'target': entry + reward * (entry-stop),
+            'entry': entry, 'stop': stop, 'target': target,
             'reward_risk_before_costs': reward, 'execution': 'research_only'}
 
 
+def validate_plan(p):
+    if p.get('symbol') != 'BTCUSDT' or p.get('venue') != 'Binance spot' or p.get('side') != 'long':
+        raise ValueError('Only BTCUSDT spot long is supported')
+    entry, stop, target = map(positive, (p['entry'], p['stop'], p['target']))
+    if not stop < entry < target:
+        raise ValueError('Require stop < entry < target')
+    return entry, stop, target
+
+
 def size(p, cash, max_loss, cap, step, cost_bps):
+    entry, stop, _ = validate_plan(p)
     cash, max_loss, cap, step = map(positive, (cash, max_loss, cap, step))
     cost_bps = float(cost_bps)
     if not math.isfinite(cost_bps) or cost_bps < 0:
@@ -63,7 +76,7 @@ def risk(ticket, price, cash, max_loss, daily_limit, daily_used, min_rr):
     reasons = []
     if ticket.get('symbol') != 'BTCUSDT' or ticket.get('venue') != 'Binance spot' or ticket.get('side') != 'long':
         reasons.append('Only BTCUSDT spot long is supported')
-    if not stop < base < target or not stop < entry < target:
+    if not stop < price < target or not stop < entry < target:
         reasons.append('Price/entry must be between stop and target')
     loss = q*loss_unit
     rr = reward_unit/loss_unit if loss_unit > 0 else 0
@@ -82,6 +95,7 @@ def risk(ticket, price, cash, max_loss, daily_limit, daily_used, min_rr):
 
 
 def alerts(p, price, state):
+    validate_plan(p)
     price = positive(price)
     identity = [p['symbol'], p['entry'], p['stop'], p['target']]
     if state.get('plan') != identity:
