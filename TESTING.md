@@ -48,3 +48,15 @@ No strategy parameters were optimized and no new profitability claim is made. Th
 2026-10-25: 363 offline tests passed, including eight macro-context tests. Coverage includes explicit offset conversion to UTC, high-impact USD event proximity, stale/future observation rejection, missing event time/importance, incomplete coverage, unexpected source and timezone-naive inputs, both news/analyst adapter routes, and explicit price-source failure. The three revised skills passed validation.
 
 The public calendar was inspected through web browsing; visible extraction did not establish all event times/importance or complete coverage. The implementation therefore uses assisted browser/user observations rather than claiming automatic calendar scraping. No Investing data is redistributed in this repository; test events are synthetic. A fresh local observation is required for calendar status observed; absent input stays unavailable. Binance remains the price source, macro context does not enable buy candidates or alter the negative strategy evidence gate.
+
+## 10,000 generated property scenarios
+
+2026-10-25: executed exactly 10,000 additional deterministic offline scenarios, seed 20261025. All passed: sizing 2,500; risk 2,500; entry decisions 2,000; position exits 1,500; macro context 1,500. The existing 363-test suite also passed. No production rule or strategy parameter changed in this run.
+
+```sh
+python tests/stress_bitcoin.py --out reports/stress-10000.json
+```
+
+The runner checks sizing caps using decimal arithmetic, quantity grid alignment, monotonicity under higher costs, risk verdicts versus independently evaluated constraints, evidence/setup gating, stop/target/timeout priorities, timezone offsets, observation freshness and event proximity. Underfunded minimum quantity is an expected rejection, not a valid order; the first harness run had to correct its assumption on this case. No application bug was established by that initial harness failure.
+
+Report: reports/stress-10000.json, with per-family counts, failures and a reproducibility digest of successful cases. These are generated scenarios, not 10,000 independent unit-test functions, historical trades, Monte Carlo profit forecasts or evidence of an edge. No network/account requests or orders were performed by the stress runner. The recorded historical strategy result remains unfavorable.
