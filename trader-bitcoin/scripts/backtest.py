@@ -149,18 +149,20 @@ def aggregate(bars):
     return result
 
 
-def breakout(bars):
+def breakout(bars, fee_bps=10, delay=0, stop_atr=1):
+    if not math.isfinite(fee_bps) or fee_bps<0 or type(delay) is not int or delay<0 or not math.isfinite(stop_atr) or stop_atr<=0:
+        raise ValueError('Invalid research sensitivity parameters')
     _, _, _, atr = indicators(bars)
     trades, available = [], 0
-    for i in range(100, len(bars) - 13):
+    for i in range(100, len(bars) - 13 - delay):
         if i < available:
             continue
         past = bars[i-20:i]
         if bars[i][4] <= max(b[2] for b in past) or bars[i][5] < 1.5 * st.mean(b[5] for b in past):
             continue
-        j = i + 1
+        j = i + 1 + delay
         entry = bars[j][1] * 1.0001  # 1 bp adverse entry slippage
-        risk = atr[i]
+        risk = atr[i] * stop_atr
         if not risk or entry <= risk:
             continue
         stop, target = entry - risk, entry + 2 * risk
@@ -180,7 +182,7 @@ def breakout(bars):
         if exit_price is None:
             exit_price = bars[k][4]
         fill = exit_price * .9999  # 1 bp adverse exit slippage
-        net = fill - entry - .001 * (entry + fill)  # illustrative 10 bp fee each side
+        net = fill - entry - (fee_bps/10000) * (entry + fill)
         trades.append({'signal': bars[i][0] + 300, 'entry_time': bars[j][0], 'exit_time': bars[k][0] + 300,
                        'side': 1, 'entry': entry, 'exit': fill, 'pnl': net / risk,
                        'gross_r': (exit_price - entry) / risk, 'result': outcome})

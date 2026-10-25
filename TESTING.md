@@ -60,3 +60,9 @@ python tests/stress_bitcoin.py --out reports/stress-10000.json
 The runner checks sizing caps using decimal arithmetic, quantity grid alignment, monotonicity under higher costs, risk verdicts versus independently evaluated constraints, evidence/setup gating, stop/target/timeout priorities, timezone offsets, observation freshness and event proximity. Underfunded minimum quantity is an expected rejection, not a valid order; the first harness run had to correct its assumption on this case. No application bug was established by that initial harness failure.
 
 Report: reports/stress-10000.json, with per-family counts, failures and a reproducibility digest of successful cases. These are generated scenarios, not 10,000 independent unit-test functions, historical trades, Monte Carlo profit forecasts or evidence of an edge. No network/account requests or orders were performed by the stress runner. The recorded historical strategy result remains unfavorable.
+
+## Exploratory 24-variant historical sensitivity
+
+2026-10-25: replayed 24 predeclared combinations of fee (0/1/5/10bp per side), next-bar entry delay (0/1 additional M5 bars) and stop (1/2/3 ATR), holding the breakout signal, 2R target, 12-bar timeout and 1bp slippage per side fixed. All final-two-month means were negative. The baseline exactly matches the prior six-month report. No active strategy parameters or decision gate were changed. Four added regression tests cover default compatibility, fee effects on matched trade timing, delay causality and invalid parameters. Full suite: 367 tests passed; backtest self-test passed.
+
+Reports: reports/btc-sensitivity-2026-10-25.md and .json. Bootstrap intervals account approximately for 24 comparisons; reused history and multiple comparisons do not establish independent validation.

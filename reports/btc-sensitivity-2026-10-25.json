@@ -1,0 +1,1318 @@
+{
+  "start_utc": "2026-04-25",
+  "end_exclusive_utc": "2026-10-25",
+  "cutoff_utc": "2026-08-25",
+  "minutes": 263520,
+  "variant_count": 24,
+  "manifest": [
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1m/BTCUSDT-1m-2026-04-25.zip",
+      "sha256": "836ff7f525185825bd09214c9396d1a174e3311a8ac466af45a07db14c49f49e",
+      "bytes": 64741
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1m/BTCUSDT-1m-2026-04-26.zip",
+      "sha256": "142180ac7380231dd5b26e9ce35f6f973c412fd1eb44cea57841dfd07de09c7e",
+      "bytes": 66659
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1m/BTCUSDT-1m-2026-04-27.zip",
+      "sha256": "9c9196823fb7a3f282a7d155d265654adb1b5700999b7f133171b6966ab8e46e",
+      "bytes": 70670
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1m/BTCUSDT-1m-2026-04-28.zip",
+      "sha256": "49d7b762732b7fdf83cb9ee86feba68fe4968e072e622bf71a3c53c9005cba67",
+      "bytes": 69838
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1m/BTCUSDT-1m-2026-04-29.zip",
+      "sha256": "9cc44d4c0c041b20f5434c0bc5b136367dce979d9df6474895fea4f435b7b04b",
+      "bytes": 70733
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1m/BTCUSDT-1m-2026-04-30.zip",
+      "sha256": "caa6bf297b9d4d92ed9789553be3cf74bfcc89b7c9e888af9f45c0eba19406bb",
+      "bytes": 69585
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1m/BTCUSDT-1m-2026-05.zip",
+      "sha256": "62983d93c35e26ec6c29116c629e443b7ddfe3d301aca83331ff58112199d8d0",
+      "bytes": 2120776
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1m/BTCUSDT-1m-2026-06.zip",
+      "sha256": "c8e1d5e70b766dd2312fc9cd7085785bb25708e27e75c21a5a5aaba61a6d07f5",
+      "bytes": 2092027
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1m/BTCUSDT-1m-2026-07.zip",
+      "sha256": "3ef15c84353da48e1c7c5fd99b9751cb036bf8986ed47f7cd1be63359c0d4f6b",
+      "bytes": 2112275
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1m/BTCUSDT-1m-2026-08.zip",
+      "sha256": "acab442e02745177063031d402929703ae983715010064b40cf811c4beb843d4",
+      "bytes": 2084946
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1m/BTCUSDT-1m-2026-09.zip",
+      "sha256": "7a021fb5981cfdb1a56457d68fa81360ab27350c981ddfe63112b2322df44b56",
+      "bytes": 2054117
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1m/BTCUSDT-1m-2026-10-01.zip",
+      "sha256": "bec170c60fd2745c9c6e8e9322603899b1dba61c10db4b8be4f07b58dc4683b8",
+      "bytes": 69975
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1m/BTCUSDT-1m-2026-10-02.zip",
+      "sha256": "32b8f49f574e771b6fadb7a2ec7ee24c7a32be3901793368d84ebcd4b7b93ca5",
+      "bytes": 70627
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1m/BTCUSDT-1m-2026-10-03.zip",
+      "sha256": "0c717ac59daa1e348303eaeefd9f9c0afebdc72729003d9ee6f0c090978899e2",
+      "bytes": 63560
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1m/BTCUSDT-1m-2026-10-04.zip",
+      "sha256": "329acb5d6be40dbbfac9a14836b9f475ddd3f767d4607cd66709b705d29bdb2f",
+      "bytes": 64818
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1m/BTCUSDT-1m-2026-10-05.zip",
+      "sha256": "bf4520dffb3f88f14f29bdd99ff3071e512a1301d97f99810343b5f9631c6eca",
+      "bytes": 69629
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1m/BTCUSDT-1m-2026-10-06.zip",
+      "sha256": "3cd4119a35f0709641b2220c1c8ced7126f2388b5c4afa062d577a48e498b4b6",
+      "bytes": 68383
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1m/BTCUSDT-1m-2026-10-07.zip",
+      "sha256": "dbf5247bf2af9890ead226015bd635cee5cccfb9171e55e322f151dc104952a7",
+      "bytes": 70060
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1m/BTCUSDT-1m-2026-10-08.zip",
+      "sha256": "d8766aac4db1dc64616cf4eaa481e3dcf68038695461f4f189659f169cf20326",
+      "bytes": 70693
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1m/BTCUSDT-1m-2026-10-09.zip",
+      "sha256": "35ac8b347a8999faf9f035563f0310870fc9185d94235c69b65b55d0b83ffb48",
+      "bytes": 68355
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1m/BTCUSDT-1m-2026-10-10.zip",
+      "sha256": "79f2a7bb104a0a61d33904a9d396b82795460113582050516ecb07cb9008d2ad",
+      "bytes": 63119
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1m/BTCUSDT-1m-2026-10-11.zip",
+      "sha256": "04e48ed4adf4bc4885615c69fb54b1558f451394908b06bd85190947d6e1a1cf",
+      "bytes": 64103
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1m/BTCUSDT-1m-2026-10-12.zip",
+      "sha256": "37eaf52515280dc290b144234d67827a07db99af88b17d5600d524157b2bd557",
+      "bytes": 69031
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1m/BTCUSDT-1m-2026-10-13.zip",
+      "sha256": "3ac30ef0aa565439a90878793cc5078b592877489271116002dad6d4a0062974",
+      "bytes": 69906
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1m/BTCUSDT-1m-2026-10-14.zip",
+      "sha256": "0994af8724c77f7ee9ca528b8071c733daf4b12019e54c3021f89462617e3047",
+      "bytes": 70264
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1m/BTCUSDT-1m-2026-10-15.zip",
+      "sha256": "330be29ffe380f91e02a5bf2a690c8be3c1c61d1b71f530969ff3d88a71a7864",
+      "bytes": 71221
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1m/BTCUSDT-1m-2026-10-16.zip",
+      "sha256": "1d2db287ac3749c8adfc763e34cbf3872f3acd47f886cd76851892542c286f4e",
+      "bytes": 69330
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1m/BTCUSDT-1m-2026-10-17.zip",
+      "sha256": "ce5536cff2985e8b1b36c115627c7a30cc8c43d89e2172d5bf5cf3b0dd2fc03a",
+      "bytes": 65267
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1m/BTCUSDT-1m-2026-10-18.zip",
+      "sha256": "7b4d9784e2034cb7a05860d2b67ceb74368eb5d71d8f2e16a04e00e2045cb784",
+      "bytes": 68372
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1m/BTCUSDT-1m-2026-10-19.zip",
+      "sha256": "b2fdee20be764f88cd640d933a492bcdfe833452fff1d6fb87b9ede081e8061b",
+      "bytes": 68956
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1m/BTCUSDT-1m-2026-10-20.zip",
+      "sha256": "d580973ba32d82a94f3669a3472b7a81a4ac598777df8bab88e9ff26d7924c75",
+      "bytes": 69973
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1m/BTCUSDT-1m-2026-10-21.zip",
+      "sha256": "1627cc21691c046cf16fc63011e6d929fcead8dd5509f3fa4e81f630bd9ad5ef",
+      "bytes": 69801
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1m/BTCUSDT-1m-2026-10-22.zip",
+      "sha256": "579980a81a1f58e14dfa66463232b7078aa561077d44e943cd3070ebee2ba900",
+      "bytes": 70594
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1m/BTCUSDT-1m-2026-10-23.zip",
+      "sha256": "2055ad6a88a9f2995f6b1f52dde92dbe369f2ef518ee93927b378a3b33d24168",
+      "bytes": 68959
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1m/BTCUSDT-1m-2026-10-24.zip",
+      "sha256": "9c975443231b3bfb0ecbfd95e95d82e56c07a5a12d43198c6ea9234aca254235",
+      "bytes": 67862
+    }
+  ],
+  "results": [
+    {
+      "fee_bps_each_side": 0,
+      "entry_delay_m5_bars": 0,
+      "stop_atr": 1,
+      "overall": {
+        "trades": 1142,
+        "wins": 352,
+        "losses": 790,
+        "ties": 0,
+        "win_rate": 0.30823117338003503,
+        "mean": -0.21378540943790203,
+        "total": -244.14293757808412,
+        "max_drawdown": 248.33055449802512,
+        "profit_factor": 0.7174811662265269
+      },
+      "early": {
+        "trades": 771,
+        "wins": 252,
+        "losses": 519,
+        "ties": 0,
+        "win_rate": 0.32684824902723736,
+        "mean": -0.16919881508237705,
+        "total": -130.4522864285127,
+        "max_drawdown": 136.48623220809108,
+        "profit_factor": 0.7703680161935135
+      },
+      "final_two_months": {
+        "trades": 371,
+        "wins": 100,
+        "losses": 271,
+        "ties": 0,
+        "win_rate": 0.2695417789757412,
+        "mean": -0.3064438036376587,
+        "total": -113.6906511495714,
+        "max_drawdown": 117.7074499627339,
+        "profit_factor": 0.6160037987400037
+      },
+      "uncertainty": {
+        "seed": 19,
+        "replays": 10000,
+        "comparisons": 24,
+        "bonferroni_day_bootstrap_mean_r": [
+          -0.5418072876659847,
+          -0.09858635871728647
+        ]
+      }
+    },
+    {
+      "fee_bps_each_side": 0,
+      "entry_delay_m5_bars": 0,
+      "stop_atr": 2,
+      "overall": {
+        "trades": 914,
+        "wins": 345,
+        "losses": 569,
+        "ties": 0,
+        "win_rate": 0.3774617067833698,
+        "mean": -0.10890802447646832,
+        "total": -99.54193437149205,
+        "max_drawdown": 108.88027986827817,
+        "profit_factor": 0.8045978251625798
+      },
+      "early": {
+        "trades": 618,
+        "wins": 240,
+        "losses": 378,
+        "ties": 0,
+        "win_rate": 0.3883495145631068,
+        "mean": -0.08340996361358179,
+        "total": -51.54735751319354,
+        "max_drawdown": 74.65144998755119,
+        "profit_factor": 0.8467562006008897
+      },
+      "final_two_months": {
+        "trades": 296,
+        "wins": 105,
+        "losses": 191,
+        "ties": 0,
+        "win_rate": 0.3547297297297297,
+        "mean": -0.16214384073749494,
+        "total": -47.9945768582985,
+        "max_drawdown": 53.09840629277734,
+        "profit_factor": 0.722648410734165
+      },
+      "uncertainty": {
+        "seed": 19,
+        "replays": 10000,
+        "comparisons": 24,
+        "bonferroni_day_bootstrap_mean_r": [
+          -0.37272939370680835,
+          0.03729737080418815
+        ]
+      }
+    },
+    {
+      "fee_bps_each_side": 0,
+      "entry_delay_m5_bars": 0,
+      "stop_atr": 3,
+      "overall": {
+        "trades": 825,
+        "wins": 336,
+        "losses": 489,
+        "ties": 0,
+        "win_rate": 0.4072727272727273,
+        "mean": -0.09526347713679811,
+        "total": -78.59236863785844,
+        "max_drawdown": 84.03272603308191,
+        "profit_factor": 0.7750294043115729
+      },
+      "early": {
+        "trades": 554,
+        "wins": 228,
+        "losses": 326,
+        "ties": 0,
+        "win_rate": 0.41155234657039713,
+        "mean": -0.09005546354881981,
+        "total": -49.890726806046175,
+        "max_drawdown": 66.57617877451491,
+        "profit_factor": 0.7827261972407172
+      },
+      "final_two_months": {
+        "trades": 271,
+        "wins": 108,
+        "losses": 163,
+        "ties": 0,
+        "win_rate": 0.3985239852398524,
+        "mean": -0.10591011746056188,
+        "total": -28.701641831812267,
+        "max_drawdown": 32.06733413243872,
+        "profit_factor": 0.7602674979768788
+      },
+      "uncertainty": {
+        "seed": 19,
+        "replays": 10000,
+        "comparisons": 24,
+        "bonferroni_day_bootstrap_mean_r": [
+          -0.3179955957244976,
+          0.10275612339824189
+        ]
+      }
+    },
+    {
+      "fee_bps_each_side": 0,
+      "entry_delay_m5_bars": 1,
+      "stop_atr": 1,
+      "overall": {
+        "trades": 1024,
+        "wins": 315,
+        "losses": 709,
+        "ties": 0,
+        "win_rate": 0.3076171875,
+        "mean": -0.21827179083664838,
+        "total": -223.51031381672794,
+        "max_drawdown": 233.63810037035114,
+        "profit_factor": 0.7099202169923587
+      },
+      "early": {
+        "trades": 691,
+        "wins": 205,
+        "losses": 486,
+        "ties": 0,
+        "win_rate": 0.29667149059334297,
+        "mean": -0.25533445847689756,
+        "total": -176.4361108075362,
+        "max_drawdown": 192.0376299756554,
+        "profit_factor": 0.665656228932983
+      },
+      "final_two_months": {
+        "trades": 333,
+        "wins": 110,
+        "losses": 223,
+        "ties": 0,
+        "win_rate": 0.3303303303303303,
+        "mean": -0.14136397300057582,
+        "total": -47.07420300919175,
+        "max_drawdown": 61.40069401919514,
+        "profit_factor": 0.8061230679281531
+      },
+      "uncertainty": {
+        "seed": 19,
+        "replays": 10000,
+        "comparisons": 24,
+        "bonferroni_day_bootstrap_mean_r": [
+          -0.42204606908160613,
+          0.12747739619368276
+        ]
+      }
+    },
+    {
+      "fee_bps_each_side": 0,
+      "entry_delay_m5_bars": 1,
+      "stop_atr": 2,
+      "overall": {
+        "trades": 871,
+        "wins": 347,
+        "losses": 524,
+        "ties": 0,
+        "win_rate": 0.3983926521239954,
+        "mean": -0.08447769495408333,
+        "total": -73.58007230500658,
+        "max_drawdown": 82.36041002680847,
+        "profit_factor": 0.8413370860752397
+      },
+      "early": {
+        "trades": 590,
+        "wins": 239,
+        "losses": 351,
+        "ties": 0,
+        "win_rate": 0.40508474576271186,
+        "mean": -0.058946080330920136,
+        "total": -34.77818739524288,
+        "max_drawdown": 58.88722628247084,
+        "profit_factor": 0.8865407451066571
+      },
+      "final_two_months": {
+        "trades": 281,
+        "wins": 108,
+        "losses": 173,
+        "ties": 0,
+        "win_rate": 0.38434163701067614,
+        "mean": -0.1380849996788744,
+        "total": -38.8018849097637,
+        "max_drawdown": 41.093457400833834,
+        "profit_factor": 0.7532081280000524
+      },
+      "uncertainty": {
+        "seed": 19,
+        "replays": 10000,
+        "comparisons": 24,
+        "bonferroni_day_bootstrap_mean_r": [
+          -0.3569326212942373,
+          0.07567614910126907
+        ]
+      }
+    },
+    {
+      "fee_bps_each_side": 0,
+      "entry_delay_m5_bars": 1,
+      "stop_atr": 3,
+      "overall": {
+        "trades": 809,
+        "wins": 348,
+        "losses": 461,
+        "ties": 0,
+        "win_rate": 0.43016069221260816,
+        "mean": -0.062331547656136625,
+        "total": -50.426222053814534,
+        "max_drawdown": 60.72425201264461,
+        "profit_factor": 0.8435162857750488
+      },
+      "early": {
+        "trades": 548,
+        "wins": 236,
+        "losses": 312,
+        "ties": 0,
+        "win_rate": 0.4306569343065693,
+        "mean": -0.05366534864918746,
+        "total": -29.40861105975473,
+        "max_drawdown": 48.9406622063794,
+        "profit_factor": 0.8628313822195208
+      },
+      "final_two_months": {
+        "trades": 261,
+        "wins": 112,
+        "losses": 149,
+        "ties": 0,
+        "win_rate": 0.42911877394636017,
+        "mean": -0.08052724518796858,
+        "total": -21.0176109940598,
+        "max_drawdown": 28.3768759418033,
+        "profit_factor": 0.8051187515829356
+      },
+      "uncertainty": {
+        "seed": 19,
+        "replays": 10000,
+        "comparisons": 24,
+        "bonferroni_day_bootstrap_mean_r": [
+          -0.28448525849525935,
+          0.11107886535105166
+        ]
+      }
+    },
+    {
+      "fee_bps_each_side": 1,
+      "entry_delay_m5_bars": 0,
+      "stop_atr": 1,
+      "overall": {
+        "trades": 1142,
+        "wins": 347,
+        "losses": 795,
+        "ties": 0,
+        "win_rate": 0.30385288966725044,
+        "mean": -0.4307790983283995,
+        "total": -491.94973029103227,
+        "max_drawdown": 491.94973029103244,
+        "profit_factor": 0.5275824213053518
+      },
+      "early": {
+        "trades": 771,
+        "wins": 247,
+        "losses": 524,
+        "ties": 0,
+        "win_rate": 0.3203631647211414,
+        "mean": -0.3899442134537724,
+        "total": -300.6469885728585,
+        "max_drawdown": 302.5356784738116,
+        "profit_factor": 0.5621066192723517
+      },
+      "final_two_months": {
+        "trades": 371,
+        "wins": 100,
+        "losses": 271,
+        "ties": 0,
+        "win_rate": 0.2695417789757412,
+        "mean": -0.5156408132565329,
+        "total": -191.3027417181737,
+        "max_drawdown": 195.0040485228537,
+        "profit_factor": 0.4607686449295963
+      },
+      "uncertainty": {
+        "seed": 19,
+        "replays": 10000,
+        "comparisons": 24,
+        "bonferroni_day_bootstrap_mean_r": [
+          -0.7786615648028381,
+          -0.28454573495192914
+        ]
+      }
+    },
+    {
+      "fee_bps_each_side": 1,
+      "entry_delay_m5_bars": 0,
+      "stop_atr": 2,
+      "overall": {
+        "trades": 914,
+        "wins": 324,
+        "losses": 590,
+        "ties": 0,
+        "win_rate": 0.3544857768052516,
+        "mean": -0.22198914869685607,
+        "total": -202.89808190892646,
+        "max_drawdown": 208.1308917323447,
+        "profit_factor": 0.6489882748697535
+      },
+      "early": {
+        "trades": 618,
+        "wins": 226,
+        "losses": 392,
+        "ties": 0,
+        "win_rate": 0.3656957928802589,
+        "mean": -0.20002211989045293,
+        "total": -123.61367009229991,
+        "max_drawdown": 141.13650994859506,
+        "profit_factor": 0.6779877593430553
+      },
+      "final_two_months": {
+        "trades": 296,
+        "wins": 98,
+        "losses": 198,
+        "ties": 0,
+        "win_rate": 0.3310810810810811,
+        "mean": -0.26785274262373826,
+        "total": -79.28441181662653,
+        "max_drawdown": 83.34652762314472,
+        "profit_factor": 0.5916523765682792
+      },
+      "uncertainty": {
+        "seed": 19,
+        "replays": 10000,
+        "comparisons": 24,
+        "bonferroni_day_bootstrap_mean_r": [
+          -0.4839461029618028,
+          -0.056004768114643964
+        ]
+      }
+    },
+    {
+      "fee_bps_each_side": 1,
+      "entry_delay_m5_bars": 0,
+      "stop_atr": 3,
+      "overall": {
+        "trades": 825,
+        "wins": 308,
+        "losses": 517,
+        "ties": 0,
+        "win_rate": 0.37333333333333335,
+        "mean": -0.17072650436564138,
+        "total": -140.84936610165414,
+        "max_drawdown": 145.09659376521486,
+        "profit_factor": 0.6384910464354133
+      },
+      "early": {
+        "trades": 554,
+        "wins": 209,
+        "losses": 345,
+        "ties": 0,
+        "win_rate": 0.37725631768953066,
+        "mean": -0.16769171471221217,
+        "total": -92.90120995056554,
+        "max_drawdown": 106.06374547808448,
+        "profit_factor": 0.6393582739269521
+      },
+      "final_two_months": {
+        "trades": 271,
+        "wins": 99,
+        "losses": 172,
+        "ties": 0,
+        "win_rate": 0.36531365313653136,
+        "mean": -0.17693046550217195,
+        "total": -47.9481561510886,
+        "max_drawdown": 50.642032874390935,
+        "profit_factor": 0.6367988384040342
+      },
+      "uncertainty": {
+        "seed": 19,
+        "replays": 10000,
+        "comparisons": 24,
+        "bonferroni_day_bootstrap_mean_r": [
+          -0.39432121651255947,
+          0.0305735247039463
+        ]
+      }
+    },
+    {
+      "fee_bps_each_side": 1,
+      "entry_delay_m5_bars": 1,
+      "stop_atr": 1,
+      "overall": {
+        "trades": 1024,
+        "wins": 310,
+        "losses": 714,
+        "ties": 0,
+        "win_rate": 0.302734375,
+        "mean": -0.43618754260571974,
+        "total": -446.656043628257,
+        "max_drawdown": 448.22954291983615,
+        "profit_factor": 0.5205982042142239
+      },
+      "early": {
+        "trades": 691,
+        "wins": 201,
+        "losses": 490,
+        "ties": 0,
+        "win_rate": 0.29088277858176553,
+        "mean": -0.4777763379520567,
+        "total": -330.1434495248712,
+        "max_drawdown": 340.7532764878534,
+        "profit_factor": 0.48448436859782
+      },
+      "final_two_months": {
+        "trades": 333,
+        "wins": 109,
+        "losses": 224,
+        "ties": 0,
+        "win_rate": 0.32732732732732733,
+        "mean": -0.3498876699801377,
+        "total": -116.51259410338585,
+        "max_drawdown": 119.92659719102814,
+        "profit_factor": 0.5999986664371786
+      },
+      "uncertainty": {
+        "seed": 19,
+        "replays": 10000,
+        "comparisons": 24,
+        "bonferroni_day_bootstrap_mean_r": [
+          -0.6483128054935193,
+          -0.06692852596806813
+        ]
+      }
+    },
+    {
+      "fee_bps_each_side": 1,
+      "entry_delay_m5_bars": 1,
+      "stop_atr": 2,
+      "overall": {
+        "trades": 871,
+        "wins": 333,
+        "losses": 538,
+        "ties": 0,
+        "win_rate": 0.3823191733639495,
+        "mean": -0.19614914186084617,
+        "total": -170.84590256079701,
+        "max_drawdown": 173.9741744309823,
+        "profit_factor": 0.6753631335603253
+      },
+      "early": {
+        "trades": 590,
+        "wins": 231,
+        "losses": 359,
+        "ties": 0,
+        "win_rate": 0.39152542372881355,
+        "mean": -0.17298905534953551,
+        "total": -102.06354265622596,
+        "max_drawdown": 118.77344148697682,
+        "profit_factor": 0.7076441828693762
+      },
+      "final_two_months": {
+        "trades": 281,
+        "wins": 102,
+        "losses": 179,
+        "ties": 0,
+        "win_rate": 0.36298932384341637,
+        "mean": -0.244777081510929,
+        "total": -68.78235990457105,
+        "max_drawdown": 70.87863108520102,
+        "profit_factor": 0.6117510256172464
+      },
+      "uncertainty": {
+        "seed": 19,
+        "replays": 10000,
+        "comparisons": 24,
+        "bonferroni_day_bootstrap_mean_r": [
+          -0.46561942538811396,
+          -0.021888548509204388
+        ]
+      }
+    },
+    {
+      "fee_bps_each_side": 1,
+      "entry_delay_m5_bars": 1,
+      "stop_atr": 3,
+      "overall": {
+        "trades": 809,
+        "wins": 330,
+        "losses": 479,
+        "ties": 0,
+        "win_rate": 0.4079110012360939,
+        "mean": -0.1379011430658119,
+        "total": -111.56202474024182,
+        "max_drawdown": 114.68648021720405,
+        "profit_factor": 0.6901513159386187
+      },
+      "early": {
+        "trades": 548,
+        "wins": 224,
+        "losses": 324,
+        "ties": 0,
+        "win_rate": 0.40875912408759124,
+        "mean": -0.13098882111889898,
+        "total": -71.78187397315664,
+        "max_drawdown": 85.26811338709285,
+        "profit_factor": 0.7018342221268419
+      },
+      "final_two_months": {
+        "trades": 261,
+        "wins": 106,
+        "losses": 155,
+        "ties": 0,
+        "win_rate": 0.4061302681992337,
+        "mean": -0.15241437075511563,
+        "total": -39.78015076708518,
+        "max_drawdown": 43.527057473098814,
+        "profit_factor": 0.666577121713314
+      },
+      "uncertainty": {
+        "seed": 19,
+        "replays": 10000,
+        "comparisons": 24,
+        "bonferroni_day_bootstrap_mean_r": [
+          -0.35702100326831304,
+          0.04704546278170615
+        ]
+      }
+    },
+    {
+      "fee_bps_each_side": 5,
+      "entry_delay_m5_bars": 0,
+      "stop_atr": 1,
+      "overall": {
+        "trades": 1142,
+        "wins": 299,
+        "losses": 843,
+        "ties": 0,
+        "win_rate": 0.2618213660245184,
+        "mean": -1.2987538538903896,
+        "total": -1483.1769011428248,
+        "max_drawdown": 1483.1769011428255,
+        "profit_factor": 0.17574741494482501
+      },
+      "early": {
+        "trades": 771,
+        "wins": 211,
+        "losses": 560,
+        "ties": 0,
+        "win_rate": 0.27367055771725035,
+        "mean": -1.2729258069393536,
+        "total": -981.4257971502417,
+        "max_drawdown": 983.0179317432384,
+        "profit_factor": 0.1816799996985928
+      },
+      "final_two_months": {
+        "trades": 371,
+        "wins": 88,
+        "losses": 283,
+        "ties": 0,
+        "win_rate": 0.2371967654986523,
+        "mean": -1.3524288517320298,
+        "total": -501.751103992583,
+        "max_drawdown": 504.6564422365501,
+        "profit_factor": 0.16389101588543356
+      },
+      "uncertainty": {
+        "seed": 19,
+        "replays": 10000,
+        "comparisons": 24,
+        "bonferroni_day_bootstrap_mean_r": [
+          -1.7959593278108166,
+          -0.9756507876617418
+        ]
+      }
+    },
+    {
+      "fee_bps_each_side": 5,
+      "entry_delay_m5_bars": 0,
+      "stop_atr": 2,
+      "overall": {
+        "trades": 914,
+        "wins": 249,
+        "losses": 665,
+        "ties": 0,
+        "win_rate": 0.2724288840262582,
+        "mean": -0.674313645578407,
+        "total": -616.322672058664,
+        "max_drawdown": 617.5400659591166,
+        "profit_factor": 0.2977805313650489
+      },
+      "early": {
+        "trades": 618,
+        "wins": 175,
+        "losses": 443,
+        "ties": 0,
+        "win_rate": 0.28317152103559873,
+        "mean": -0.6664707449979376,
+        "total": -411.8789204087254,
+        "max_drawdown": 419.48291629920976,
+        "profit_factor": 0.30336312331578363
+      },
+      "final_two_months": {
+        "trades": 296,
+        "wins": 74,
+        "losses": 222,
+        "ties": 0,
+        "win_rate": 0.25,
+        "mean": -0.6906883501687117,
+        "total": -204.44375164993863,
+        "max_drawdown": 207.36904243821436,
+        "profit_factor": 0.2862575010151639
+      },
+      "uncertainty": {
+        "seed": 19,
+        "replays": 10000,
+        "comparisons": 24,
+        "bonferroni_day_bootstrap_mean_r": [
+          -0.9749221728225048,
+          -0.42327912148829505
+        ]
+      }
+    },
+    {
+      "fee_bps_each_side": 5,
+      "entry_delay_m5_bars": 0,
+      "stop_atr": 3,
+      "overall": {
+        "trades": 825,
+        "wins": 231,
+        "losses": 594,
+        "ties": 0,
+        "win_rate": 0.28,
+        "mean": -0.47257861328101447,
+        "total": -389.87735595683694,
+        "max_drawdown": 390.9367960095835,
+        "profit_factor": 0.3120574218741376
+      },
+      "early": {
+        "trades": 554,
+        "wins": 160,
+        "losses": 394,
+        "ties": 0,
+        "win_rate": 0.2888086642599278,
+        "mean": -0.4782367193657816,
+        "total": -264.943142528643,
+        "max_drawdown": 271.2412075258547,
+        "profit_factor": 0.3026604184111449
+      },
+      "final_two_months": {
+        "trades": 271,
+        "wins": 71,
+        "losses": 200,
+        "ties": 0,
+        "win_rate": 0.26199261992619927,
+        "mean": -0.4610118576686123,
+        "total": -124.93421342819393,
+        "max_drawdown": 126.51021410653614,
+        "profit_factor": 0.33117054927583456
+      },
+      "uncertainty": {
+        "seed": 19,
+        "replays": 10000,
+        "comparisons": 24,
+        "bonferroni_day_bootstrap_mean_r": [
+          -0.718619876173397,
+          -0.22829195273062783
+        ]
+      }
+    },
+    {
+      "fee_bps_each_side": 5,
+      "entry_delay_m5_bars": 1,
+      "stop_atr": 1,
+      "overall": {
+        "trades": 1024,
+        "wins": 272,
+        "losses": 752,
+        "ties": 0,
+        "win_rate": 0.265625,
+        "mean": -1.3078505496820052,
+        "total": -1339.2389628743733,
+        "max_drawdown": 1339.675412575274,
+        "profit_factor": 0.17308915183579018
+      },
+      "early": {
+        "trades": 691,
+        "wins": 173,
+        "losses": 518,
+        "ties": 0,
+        "win_rate": 0.2503617945007236,
+        "mean": -1.3675438558526933,
+        "total": -944.972804394211,
+        "max_drawdown": 944.9728043942113,
+        "profit_factor": 0.1576079677095793
+      },
+      "final_two_months": {
+        "trades": 333,
+        "wins": 99,
+        "losses": 234,
+        "ties": 0,
+        "win_rate": 0.2972972972972973,
+        "mean": -1.183982457898385,
+        "total": -394.26615848016223,
+        "max_drawdown": 396.11806253113724,
+        "profit_factor": 0.20797571846881663
+      },
+      "uncertainty": {
+        "seed": 19,
+        "replays": 10000,
+        "comparisons": 24,
+        "bonferroni_day_bootstrap_mean_r": [
+          -1.624289614546344,
+          -0.814820744352836
+        ]
+      }
+    },
+    {
+      "fee_bps_each_side": 5,
+      "entry_delay_m5_bars": 1,
+      "stop_atr": 2,
+      "overall": {
+        "trades": 871,
+        "wins": 253,
+        "losses": 618,
+        "ties": 0,
+        "win_rate": 0.2904707233065442,
+        "mean": -0.6428349294878974,
+        "total": -559.9092235839587,
+        "max_drawdown": 561.1268484844079,
+        "profit_factor": 0.30300666466691273
+      },
+      "early": {
+        "trades": 590,
+        "wins": 170,
+        "losses": 420,
+        "ties": 0,
+        "win_rate": 0.288135593220339,
+        "mean": -0.6291609554239971,
+        "total": -371.20496370015826,
+        "max_drawdown": 379.59017178825496,
+        "profit_factor": 0.31289951905079944
+      },
+      "final_two_months": {
+        "trades": 281,
+        "wins": 83,
+        "losses": 198,
+        "ties": 0,
+        "win_rate": 0.29537366548042704,
+        "mean": -0.6715454088391475,
+        "total": -188.70425988380043,
+        "max_drawdown": 190.01932582266997,
+        "profit_factor": 0.2826905821711808
+      },
+      "uncertainty": {
+        "seed": 19,
+        "replays": 10000,
+        "comparisons": 24,
+        "bonferroni_day_bootstrap_mean_r": [
+          -0.9585785493568018,
+          -0.4078899266627481
+        ]
+      }
+    },
+    {
+      "fee_bps_each_side": 5,
+      "entry_delay_m5_bars": 1,
+      "stop_atr": 3,
+      "overall": {
+        "trades": 809,
+        "wins": 239,
+        "losses": 570,
+        "ties": 0,
+        "win_rate": 0.2954264524103832,
+        "mean": -0.44017952470451294,
+        "total": -356.10523548595097,
+        "max_drawdown": 357.1448817807904,
+        "profit_factor": 0.33080422357535383
+      },
+      "early": {
+        "trades": 548,
+        "wins": 160,
+        "losses": 388,
+        "ties": 0,
+        "win_rate": 0.291970802919708,
+        "mean": -0.440282710997745,
+        "total": -241.27492562676426,
+        "max_drawdown": 248.97501120757659,
+        "profit_factor": 0.3319921366690352
+      },
+      "final_two_months": {
+        "trades": 261,
+        "wins": 79,
+        "losses": 182,
+        "ties": 0,
+        "win_rate": 0.30268199233716475,
+        "mean": -0.43996287302370385,
+        "total": -114.8303098591867,
+        "max_drawdown": 115.93491684630553,
+        "profit_factor": 0.3282944317710468
+      },
+      "uncertainty": {
+        "seed": 19,
+        "replays": 10000,
+        "comparisons": 24,
+        "bonferroni_day_bootstrap_mean_r": [
+          -0.6839857894625669,
+          -0.22186674030470102
+        ]
+      }
+    },
+    {
+      "fee_bps_each_side": 10,
+      "entry_delay_m5_bars": 0,
+      "stop_atr": 1,
+      "overall": {
+        "trades": 1142,
+        "wins": 198,
+        "losses": 944,
+        "ties": 0,
+        "win_rate": 0.1733800350262697,
+        "mean": -2.3837222983428767,
+        "total": -2722.2108647075656,
+        "max_drawdown": 2722.210864707562,
+        "profit_factor": 0.049708670883953074
+      },
+      "early": {
+        "trades": 771,
+        "wins": 132,
+        "losses": 639,
+        "ties": 0,
+        "win_rate": 0.17120622568093385,
+        "mean": -2.3766527987963304,
+        "total": -1832.3993078719707,
+        "max_drawdown": 1833.6207483300216,
+        "profit_factor": 0.05050233136667916
+      },
+      "final_two_months": {
+        "trades": 371,
+        "wins": 66,
+        "losses": 305,
+        "ties": 0,
+        "win_rate": 0.1778975741239892,
+        "mean": -2.3984138998264006,
+        "total": -889.8115568355947,
+        "max_drawdown": 891.7219343786714,
+        "profit_factor": 0.04807008992490556
+      },
+      "uncertainty": {
+        "seed": 19,
+        "replays": 10000,
+        "comparisons": 24,
+        "bonferroni_day_bootstrap_mean_r": [
+          -3.1363221168751783,
+          -1.8211443308687505
+        ]
+      }
+    },
+    {
+      "fee_bps_each_side": 10,
+      "entry_delay_m5_bars": 0,
+      "stop_atr": 2,
+      "overall": {
+        "trades": 914,
+        "wins": 191,
+        "losses": 723,
+        "ties": 0,
+        "win_rate": 0.2089715536105033,
+        "mean": -1.2397192666803458,
+        "total": -1133.103409745836,
+        "max_drawdown": 1133.60943770307,
+        "profit_factor": 0.12833032757985463
+      },
+      "early": {
+        "trades": 618,
+        "wins": 132,
+        "losses": 486,
+        "ties": 0,
+        "win_rate": 0.21359223300970873,
+        "mean": -1.2495315263822933,
+        "total": -772.2104833042572,
+        "max_drawdown": 772.210483304257,
+        "profit_factor": 0.12938427140214803
+      },
+      "final_two_months": {
+        "trades": 296,
+        "wins": 59,
+        "losses": 237,
+        "ties": 0,
+        "win_rate": 0.19932432432432431,
+        "mean": -1.2192328595999284,
+        "total": -360.8929264415788,
+        "max_drawdown": 362.8413951231557,
+        "profit_factor": 0.12606658718356728
+      },
+      "uncertainty": {
+        "seed": 19,
+        "replays": 10000,
+        "comparisons": 24,
+        "bonferroni_day_bootstrap_mean_r": [
+          -1.6337607431247105,
+          -0.8781303664335159
+        ]
+      }
+    },
+    {
+      "fee_bps_each_side": 10,
+      "entry_delay_m5_bars": 0,
+      "stop_atr": 3,
+      "overall": {
+        "trades": 825,
+        "wins": 166,
+        "losses": 659,
+        "ties": 0,
+        "win_rate": 0.2012121212121212,
+        "mean": -0.8498937494252309,
+        "total": -701.1623432758155,
+        "max_drawdown": 701.7474153823653,
+        "profit_factor": 0.14498659058001295
+      },
+      "early": {
+        "trades": 554,
+        "wins": 110,
+        "losses": 444,
+        "ties": 0,
+        "win_rate": 0.19855595667870035,
+        "mean": -0.8664179751827434,
+        "total": -479.99555825123986,
+        "max_drawdown": 480.9272622088187,
+        "profit_factor": 0.13689080265267198
+      },
+      "final_two_months": {
+        "trades": 271,
+        "wins": 56,
+        "losses": 215,
+        "ties": 0,
+        "win_rate": 0.2066420664206642,
+        "mean": -0.8161135978766627,
+        "total": -221.1667850245756,
+        "max_drawdown": 222.09175815530378,
+        "profit_factor": 0.16204472496600228
+      },
+      "uncertainty": {
+        "seed": 19,
+        "replays": 10000,
+        "comparisons": 24,
+        "bonferroni_day_bootstrap_mean_r": [
+          -1.1285291080190958,
+          -0.5391327200557946
+        ]
+      }
+    },
+    {
+      "fee_bps_each_side": 10,
+      "entry_delay_m5_bars": 1,
+      "stop_atr": 1,
+      "overall": {
+        "trades": 1024,
+        "wins": 175,
+        "losses": 849,
+        "ties": 0,
+        "win_rate": 0.1708984375,
+        "mean": -2.397429308527362,
+        "total": -2454.967611932019,
+        "max_drawdown": 2454.9676119320197,
+        "profit_factor": 0.046426749765601426
+      },
+      "early": {
+        "trades": 691,
+        "wins": 105,
+        "losses": 586,
+        "ties": 0,
+        "win_rate": 0.15195369030390737,
+        "mean": -2.479753253228489,
+        "total": -1713.509497980886,
+        "max_drawdown": 1713.5094979808857,
+        "profit_factor": 0.042918991203164
+      },
+      "final_two_months": {
+        "trades": 333,
+        "wins": 70,
+        "losses": 263,
+        "ties": 0,
+        "win_rate": 0.21021021021021022,
+        "mean": -2.2266009427961944,
+        "total": -741.4581139511328,
+        "max_drawdown": 742.3422564937256,
+        "profit_factor": 0.054435633447889355
+      },
+      "uncertainty": {
+        "seed": 19,
+        "replays": 10000,
+        "comparisons": 24,
+        "bonferroni_day_bootstrap_mean_r": [
+          -2.8801968229024735,
+          -1.6995746475613993
+        ]
+      }
+    },
+    {
+      "fee_bps_each_side": 10,
+      "entry_delay_m5_bars": 1,
+      "stop_atr": 2,
+      "overall": {
+        "trades": 871,
+        "wins": 191,
+        "losses": 680,
+        "ties": 0,
+        "win_rate": 0.21928817451205512,
+        "mean": -1.2011921640217116,
+        "total": -1046.2383748629109,
+        "max_drawdown": 1046.7448438191855,
+        "profit_factor": 0.12646009273173522
+      },
+      "early": {
+        "trades": 590,
+        "wins": 133,
+        "losses": 457,
+        "ties": 0,
+        "win_rate": 0.22542372881355932,
+        "mean": -1.1993758305170739,
+        "total": -707.6317400050737,
+        "max_drawdown": 708.0015082958108,
+        "profit_factor": 0.12991646412186594
+      },
+      "final_two_months": {
+        "trades": 281,
+        "wins": 58,
+        "losses": 223,
+        "ties": 0,
+        "win_rate": 0.20640569395017794,
+        "mean": -1.2050058179994205,
+        "total": -338.60663485783715,
+        "max_drawdown": 339.1131038141117,
+        "profit_factor": 0.11914744742637064
+      },
+      "uncertainty": {
+        "seed": 19,
+        "replays": 10000,
+        "comparisons": 24,
+        "bonferroni_day_bootstrap_mean_r": [
+          -1.5922409236371722,
+          -0.8694040844374318
+        ]
+      }
+    },
+    {
+      "fee_bps_each_side": 10,
+      "entry_delay_m5_bars": 1,
+      "stop_atr": 3,
+      "overall": {
+        "trades": 809,
+        "wins": 172,
+        "losses": 637,
+        "ties": 0,
+        "win_rate": 0.2126081582200247,
+        "mean": -0.8180275017528893,
+        "total": -661.7842489180874,
+        "max_drawdown": 662.3496772449606,
+        "profit_factor": 0.15162142546187
+      },
+      "early": {
+        "trades": 548,
+        "wins": 120,
+        "losses": 428,
+        "ties": 0,
+        "win_rate": 0.21897810218978103,
+        "mean": -0.8269000733463026,
+        "total": -453.1412401937738,
+        "max_drawdown": 455.4387045154042,
+        "profit_factor": 0.14928719882686667
+      },
+      "final_two_months": {
+        "trades": 261,
+        "wins": 52,
+        "losses": 209,
+        "ties": 0,
+        "win_rate": 0.19923371647509577,
+        "mean": -0.7993985008594391,
+        "total": -208.6430087243136,
+        "max_drawdown": 209.20843705118597,
+        "profit_factor": 0.15664715506569388
+      },
+      "uncertainty": {
+        "seed": 19,
+        "replays": 10000,
+        "comparisons": 24,
+        "bonferroni_day_bootstrap_mean_r": [
+          -1.1128205482743136,
+          -0.5343947945402128
+        ]
+      }
+    }
+  ],
+  "fixed_assumptions": "M5 prior20-high breakout, volume1.5x; 1bp adverse slippage each side; target2R; max12bars after entry; stop-first; no overlap.",
+  "limitation": "Exploratory reused history; all 24 variants examined, approximate familywise bootstrap intervals, no untouched validation. Fee zero still includes slippage. R units differ with stop distance. No account sizing or macro filters.",
+  "execution": "disabled",
+  "strategy_promoted": false
+}
