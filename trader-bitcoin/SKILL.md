@@ -5,6 +5,8 @@ description: Analyze Binance BTCUSDT spot, check completed candles against a lev
 
 # Bitcoin research adapter
 
+For fixed-rule buy/wait/hold/exit research decisions, read [references/decision.md](references/decision.md). Use `scripts/decision.py`; missing or unfavorable historical evidence must produce WAIT, not an actionable buy. Historical screening is not independent strategy validation. Never fabricate a position from a candidate plan.
+
 For entry-level checks, stop/target plans, fractional sizing, risk checks and persistent threshold alerts, read [references/workflow.md](references/workflow.md) and use `scripts/workflow.py`. Ask for missing cash/risk limits and entry/stop levels rather than inventing personal trading limits. All amounts are USDT; sizing uses BTC fractions, not whole stock shares. These modules produce local research files and do not send orders. Do not claim a passed risk check validates a strategy.
 
 For a current descriptive snapshot, run `python scripts/market.py --interval 5m --out outputs/btc-snapshot.json` from this skill directory. Supported intervals: 1m, 5m, 15m, 1h. Use completed candles only. Report the source, interval and observation time; do not label a snapshot as a continuous feed. A request for monitoring still needs a duration and scheduling mechanism.

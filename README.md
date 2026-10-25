@@ -69,3 +69,14 @@ python trader-bitcoin/scripts/backtest.py --self-test
 Somente leitura e simulacao. Nao envia ordens demo ou reais, nao usa credenciais e nao acessa endpoints privados. Nao inclui futuros, alavancagem, scanner de acoes ou regras de sessao NYSE no fluxo de Bitcoin.
 
 Fontes: [arquivos Binance](https://github.com/binance/binance-public-data), [API publica de mercado](https://developers.binance.com/docs/binance-spot-api-docs/faqs/market_data_only).
+
+## Decisao de compra e saida
+
+O modo de decisao usa regra fixa de rompimento M5 com volume, stop 1 ATR, alvo 2R e limite de uma hora. [Regra, comandos e evidencia](trader-bitcoin/references/decision.md).
+
+```sh
+python trader-entry/btc.py --strategy breakout --evidence reports/btc-breakout-evidence-2026-10-23.json --out outputs/decision.json
+python trader-exit/btc.py --position position.json --out outputs/exit-decision.json
+```
+
+Estados: WAIT, BUY_CANDIDATE (somente pesquisa), HOLD e SELL_EXIT (saida de compra, nao venda a descoberto). O historico registrado foi desfavoravel: media de -2,37R nas 378 operacoes do trecho final, apos custos ilustrativos. Portanto a evidencia fornecida bloqueia candidatos de compra. Nao foi encontrada vantagem validada. A saida exige posicao informada pelo usuario e nao executa ordens.

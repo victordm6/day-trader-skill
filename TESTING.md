@@ -30,3 +30,9 @@ Original stock skill documentation is preserved under each module's references/u
 Regression fixes: candle open timestamps must align to the interval and close timestamps must match the interval end. Disclosure and news source URLs require an HTTPS host; disclosure entity/action fields must be nonempty text. The older gap fixture now uses an aligned duplicate so it continues to test continuity separately from timestamp validity. A public Binance 5m analyst smoke check passed after the stricter checks. The historical replay self-test also passed.
 
 No trades were placed. These are software reliability tests, not additional strategy profitability results.
+
+## Fixed decision research
+
+2026-10-25: added buy/wait and long-position hold/exit decisions with six regression tests for evidence gating, missing/mismatched/stale/future/invalid evidence, technical conditions, stop/target/timeout, and malformed positions. Replayed verified 183-day Binance data without tuning: 1,143 spot trades, last-two-month segment 378 trades, mean -2.367746 R after illustrative costs. Daily bootstrap interval entirely negative. The included report blocks buy candidates; no validated edge is claimed. Full report and source hashes are versioned in reports/.
+
+Final verification: 350 offline tests passed. A public Binance entry-adapter smoke check returned WAIT with research_gate_passed=false. No exchange order was sent.

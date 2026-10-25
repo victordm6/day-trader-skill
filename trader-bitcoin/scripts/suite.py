@@ -135,6 +135,19 @@ def main():
     if len(sys.argv) < 2 or sys.argv[1] not in MODULES:
         raise SystemExit('Module required: '+', '.join(MODULES))
     module, rest = sys.argv[1], sys.argv[2:]
+    if module == 'entry' and '--strategy' in rest:
+        index=rest.index('--strategy')
+        if index+1 >= len(rest) or rest[index+1] != 'breakout':
+            raise SystemExit('Supported strategy: breakout')
+        import decision
+        sys.argv=[sys.argv[0],'check']+rest[:index]+rest[index+2:]
+        decision.main()
+        return
+    if module == 'exit' and '--position' in rest:
+        import decision
+        sys.argv=[sys.argv[0],'check']+rest
+        decision.main()
+        return
     # Reuse the same implementations and JSON handoffs instead of divergent stock rules.
     delegated = {'entry':'entry','exit':'plan','budget':'size','risk':'risk','alerts':'alerts'}
     if module in delegated:

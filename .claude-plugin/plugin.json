@@ -1,7 +1,7 @@
 {
   "name": "day-trader-skill",
   "description": "Eleven integrated Bitcoin adapters plus the BTC research hub: Binance spot analysis, project news, plans, sizing, risk, historical tests, paper tickets and alerts. No live orders.",
-  "version": "4.0.0",
+  "version": "4.1.0",
   "author": {
     "name": "Jake Schincariol",
     "url": "https://opusjake.ai"
