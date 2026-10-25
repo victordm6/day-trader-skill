@@ -36,3 +36,9 @@ No trades were placed. These are software reliability tests, not additional stra
 2026-10-25: added buy/wait and long-position hold/exit decisions with six regression tests for evidence gating, missing/mismatched/stale/future/invalid evidence, technical conditions, stop/target/timeout, and malformed positions. Replayed verified 183-day Binance data without tuning: 1,143 spot trades, last-two-month segment 378 trades, mean -2.367746 R after illustrative costs. Daily bootstrap interval entirely negative. The included report blocks buy candidates; no validated edge is claimed. Full report and source hashes are versioned in reports/.
 
 Final verification: 350 offline tests passed. A public Binance entry-adapter smoke check returned WAIT with research_gate_passed=false. No exchange order was sent.
+
+## Decision evidence and position regressions
+
+2026-10-25: 355 offline tests passed. Five new decision tests exercise malformed evidence (non-object, empty/reversed uncertainty bounds, infinite sample count), 100-trade and 30-day boundaries, exact volume/breakout thresholds, nonfinite observations, provisional-plan rejection and exit evaluation with a corrupt entry-evidence file. Evidence counts now require integers and intervals require two finite ordered endpoints. Exit checks ignore entry-evidence files because that evidence must not block an exit. Provisional reference plans cannot masquerade as actual positions. The backtest self-test passed again.
+
+No strategy parameters were optimized and no new profitability claim is made. The recorded negative historical result still blocks buy candidates. No account access or trades were performed during these tests.

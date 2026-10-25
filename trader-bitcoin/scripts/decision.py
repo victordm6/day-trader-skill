@@ -40,25 +40,32 @@ def evidence(start,end,cache):
 def gate(report, now):
     if not report:
         return False,'No historical evidence file'
+    if not isinstance(report,dict):
+        return False,'Invalid evidence object'
     if report.get('rule') != RULE or report.get('symbol') != 'BTCUSDT' or report.get('venue') != 'Binance spot':
         return False,'Evidence does not match rule/market'
     try:
         end=dt.date.fromisoformat(report['end_exclusive_utc'])
         age=(now.date()-end).days
-        stats=report['holdout']; lower=report['uncertainty']['mean_per_trade_95pct_day_bootstrap'][0]
-        mean=float(stats['mean']); lower=float(lower)
-        supported=stats['trades']>=100 and math.isfinite(mean) and math.isfinite(lower) and mean>0 and lower>0
+        stats=report['holdout']; bounds=report['uncertainty']['mean_per_trade_95pct_day_bootstrap']
+        if len(bounds)!=2 or type(stats['trades']) is not int:
+            return False,'Invalid sample count or uncertainty interval'
+        mean=float(stats['mean']); lower,upper=map(float,bounds)
+        supported=stats['trades']>=100 and all(math.isfinite(x) for x in (mean,lower,upper)) and 0<lower<=upper and mean>0
         if not 0 <= age <= 30: return False,'Evidence is future-dated or older than 30 days'
         return supported,'Historical research criteria met; edge still unproven' if supported else 'Historical research criteria failed'
-    except (KeyError,TypeError,ValueError,OverflowError):
+    except (KeyError,TypeError,ValueError,OverflowError,IndexError):
         return False,'Invalid or incomplete evidence'
 
 
 def decide(snapshot, report=None, position=None):
+    workflow.positive(snapshot['close'])
     observed=dt.datetime.fromisoformat(snapshot['last_completed_close_time_utc'])
     if observed.tzinfo is None: raise ValueError('Require timezone-aware observation')
     result={'rule':RULE,'symbol':'BTCUSDT','price_source':snapshot,'execution':'disabled','exchange_order_sent':False}
     if position is not None:
+        if position.get('reference_only'):
+            raise ValueError('A provisional reference plan is not an actual position')
         workflow.validate_plan(position)
         workflow.positive(position['quantity_btc'])
         entered=dt.datetime.fromisoformat(position['entered_at_utc'])
@@ -101,10 +108,10 @@ def main():
     if args.command=='validate':
         result=evidence(args.start,args.end,args.cache)
     else:
-        report=workflow.read(args.evidence) if args.evidence else None
         position=workflow.read(args.position) if args.position else None
+        report=workflow.read(args.evidence) if args.evidence and position is None else None
         result=decide(market.snapshot('1m' if position else '5m'),report,position)
-        if args.evidence: result['evidence_sha256']=hashlib.sha256(args.evidence.read_bytes()).hexdigest()
+        if args.evidence and position is None: result['evidence_sha256']=hashlib.sha256(args.evidence.read_bytes()).hexdigest()
     result['generated_at_utc']=dt.datetime.now(dt.timezone.utc).isoformat()
     text=json.dumps(result,indent=2,allow_nan=False)
     if args.out:
