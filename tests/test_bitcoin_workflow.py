@@ -111,7 +111,8 @@ class BitcoinWorkflowTests(unittest.TestCase):
         with patch.object(market,'public',side_effect=lambda path: {'serverTime': 200*300000} if path == '/time' else rows):
             with self.assertRaisesRegex(ValueError,'Stale'):
                 market.snapshot('5m')
-        rows[50][0] += 1000
+        rows[50][0] += 300000
+        rows[50][6] += 300000
         with patch.object(market,'public',side_effect=lambda path: {'serverTime': 101*300000} if path == '/time' else rows):
             with self.assertRaisesRegex(ValueError,'gap'):
                 market.snapshot('5m')

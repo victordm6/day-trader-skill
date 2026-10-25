@@ -45,7 +45,7 @@ def parse_feed(payload):
         if not link:
             child = node.find(atom+'link')
             link = child.get('href') if child is not None else None
-        if not title or not link or urlparse(link).scheme != 'https':
+        if not title or not link or not valid_https(link):
             continue
         published = node.findtext('pubDate') or node.findtext(atom+'published') or node.findtext(atom+'updated')
         result.append({'id':hashlib.sha256(link.encode()).hexdigest(), 'title':title,
@@ -85,6 +85,16 @@ def news(state_path, feed_file=None):
             'limitation':'Bitcoin Core project announcements only. Not comprehensive market, macro or regulatory news. Empty results do not mean no news.'}
 
 
+def valid_https(value):
+    if not isinstance(value,str):
+        return False
+    try:
+        parsed=urlparse(value)
+        return parsed.scheme == 'https' and bool(parsed.hostname) and not parsed.username and not parsed.password and not any(c.isspace() for c in value)
+    except ValueError:
+        return False
+
+
 def disclosures(records):
     accepted, rejected = [], []
     for index, record in enumerate(records):
@@ -93,9 +103,9 @@ def disclosures(records):
                 raise ValueError('Record must be an object')
             if record.get('asset') != 'BTC' or record.get('exposure') not in ('direct','etf','company'):
                 raise ValueError('Require BTC asset and explicit direct/etf/company exposure')
-            if urlparse(record['source_url']).scheme != 'https':
+            if not valid_https(record['source_url']):
                 raise ValueError('Require HTTPS primary source URL')
-            if not record['entity'] or not record['action']:
+            if not all(isinstance(record.get(key),str) and record[key].strip() for key in ('entity','action')):
                 raise ValueError('Missing entity or action')
             date = dt.date.fromisoformat(record['disclosed_date'])
             if date > dt.datetime.now(dt.timezone.utc).date():

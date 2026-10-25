@@ -22,3 +22,11 @@ This verifies software behavior; it is not a new profitability backtest or evide
 Public read-only smoke checks succeeded for Binance 5m/1h scanner snapshots and the Bitcoin Core feed. These checks are not automated profitability tests. News is limited to project announcements; disclosures are user-supplied and not automatically verified; analyst statistics describe a recent candle sample; the broker cannot send exchange orders or simulate fills.
 
 Original stock skill documentation is preserved under each module's references/upstream-SKILL.md and its legacy document tests target those files. Active BTC registration and executable adapters have separate checks. Legacy Python stock tools are preserved unchanged.
+
+## Additional edge and adapter handoff checks
+
+2026-10-25: 344 tests passed (29 Bitcoin-specific tests, including the 500 seeded sizing scenarios). Eight new tests cover malformed candle timestamps, bad OHLC/volume, duplicate or insufficient data, complete scanner outage, disclosure field validation, preservation of news state during network failure, backlog/deduplication/date ordering and the full exit -> budget -> risk -> paper broker -> alerts adapter handoff. Paper tickets were blocked for breached stops, insufficient cash, exhausted daily risk, unsuitable reward/risk and unsupported symbols.
+
+Regression fixes: candle open timestamps must align to the interval and close timestamps must match the interval end. Disclosure and news source URLs require an HTTPS host; disclosure entity/action fields must be nonempty text. The older gap fixture now uses an aligned duplicate so it continues to test continuity separately from timestamp validity. A public Binance 5m analyst smoke check passed after the stricter checks. The historical replay self-test also passed.
+
+No trades were placed. These are software reliability tests, not additional strategy profitability results.
