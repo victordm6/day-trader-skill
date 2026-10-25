@@ -1,0 +1,576 @@
+{
+  "symbol": "BTCUSDT",
+  "venue": "Binance spot",
+  "start_utc": "2026-04-25",
+  "end_exclusive_utc": "2026-10-25",
+  "holdout_start_utc": "2026-08-25",
+  "minutes": 263520,
+  "days": 183,
+  "manifest": [
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1m/BTCUSDT-1m-2026-04-25.zip",
+      "sha256": "836ff7f525185825bd09214c9396d1a174e3311a8ac466af45a07db14c49f49e",
+      "bytes": 64741
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1m/BTCUSDT-1m-2026-04-26.zip",
+      "sha256": "142180ac7380231dd5b26e9ce35f6f973c412fd1eb44cea57841dfd07de09c7e",
+      "bytes": 66659
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1m/BTCUSDT-1m-2026-04-27.zip",
+      "sha256": "9c9196823fb7a3f282a7d155d265654adb1b5700999b7f133171b6966ab8e46e",
+      "bytes": 70670
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1m/BTCUSDT-1m-2026-04-28.zip",
+      "sha256": "49d7b762732b7fdf83cb9ee86feba68fe4968e072e622bf71a3c53c9005cba67",
+      "bytes": 69838
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1m/BTCUSDT-1m-2026-04-29.zip",
+      "sha256": "9cc44d4c0c041b20f5434c0bc5b136367dce979d9df6474895fea4f435b7b04b",
+      "bytes": 70733
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1m/BTCUSDT-1m-2026-04-30.zip",
+      "sha256": "caa6bf297b9d4d92ed9789553be3cf74bfcc89b7c9e888af9f45c0eba19406bb",
+      "bytes": 69585
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1m/BTCUSDT-1m-2026-05.zip",
+      "sha256": "62983d93c35e26ec6c29116c629e443b7ddfe3d301aca83331ff58112199d8d0",
+      "bytes": 2120776
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1m/BTCUSDT-1m-2026-06.zip",
+      "sha256": "c8e1d5e70b766dd2312fc9cd7085785bb25708e27e75c21a5a5aaba61a6d07f5",
+      "bytes": 2092027
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1m/BTCUSDT-1m-2026-07.zip",
+      "sha256": "3ef15c84353da48e1c7c5fd99b9751cb036bf8986ed47f7cd1be63359c0d4f6b",
+      "bytes": 2112275
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1m/BTCUSDT-1m-2026-08.zip",
+      "sha256": "acab442e02745177063031d402929703ae983715010064b40cf811c4beb843d4",
+      "bytes": 2084946
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1m/BTCUSDT-1m-2026-09.zip",
+      "sha256": "7a021fb5981cfdb1a56457d68fa81360ab27350c981ddfe63112b2322df44b56",
+      "bytes": 2054117
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1m/BTCUSDT-1m-2026-10-01.zip",
+      "sha256": "bec170c60fd2745c9c6e8e9322603899b1dba61c10db4b8be4f07b58dc4683b8",
+      "bytes": 69975
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1m/BTCUSDT-1m-2026-10-02.zip",
+      "sha256": "32b8f49f574e771b6fadb7a2ec7ee24c7a32be3901793368d84ebcd4b7b93ca5",
+      "bytes": 70627
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1m/BTCUSDT-1m-2026-10-03.zip",
+      "sha256": "0c717ac59daa1e348303eaeefd9f9c0afebdc72729003d9ee6f0c090978899e2",
+      "bytes": 63560
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1m/BTCUSDT-1m-2026-10-04.zip",
+      "sha256": "329acb5d6be40dbbfac9a14836b9f475ddd3f767d4607cd66709b705d29bdb2f",
+      "bytes": 64818
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1m/BTCUSDT-1m-2026-10-05.zip",
+      "sha256": "bf4520dffb3f88f14f29bdd99ff3071e512a1301d97f99810343b5f9631c6eca",
+      "bytes": 69629
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1m/BTCUSDT-1m-2026-10-06.zip",
+      "sha256": "3cd4119a35f0709641b2220c1c8ced7126f2388b5c4afa062d577a48e498b4b6",
+      "bytes": 68383
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1m/BTCUSDT-1m-2026-10-07.zip",
+      "sha256": "dbf5247bf2af9890ead226015bd635cee5cccfb9171e55e322f151dc104952a7",
+      "bytes": 70060
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1m/BTCUSDT-1m-2026-10-08.zip",
+      "sha256": "d8766aac4db1dc64616cf4eaa481e3dcf68038695461f4f189659f169cf20326",
+      "bytes": 70693
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1m/BTCUSDT-1m-2026-10-09.zip",
+      "sha256": "35ac8b347a8999faf9f035563f0310870fc9185d94235c69b65b55d0b83ffb48",
+      "bytes": 68355
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1m/BTCUSDT-1m-2026-10-10.zip",
+      "sha256": "79f2a7bb104a0a61d33904a9d396b82795460113582050516ecb07cb9008d2ad",
+      "bytes": 63119
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1m/BTCUSDT-1m-2026-10-11.zip",
+      "sha256": "04e48ed4adf4bc4885615c69fb54b1558f451394908b06bd85190947d6e1a1cf",
+      "bytes": 64103
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1m/BTCUSDT-1m-2026-10-12.zip",
+      "sha256": "37eaf52515280dc290b144234d67827a07db99af88b17d5600d524157b2bd557",
+      "bytes": 69031
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1m/BTCUSDT-1m-2026-10-13.zip",
+      "sha256": "3ac30ef0aa565439a90878793cc5078b592877489271116002dad6d4a0062974",
+      "bytes": 69906
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1m/BTCUSDT-1m-2026-10-14.zip",
+      "sha256": "0994af8724c77f7ee9ca528b8071c733daf4b12019e54c3021f89462617e3047",
+      "bytes": 70264
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1m/BTCUSDT-1m-2026-10-15.zip",
+      "sha256": "330be29ffe380f91e02a5bf2a690c8be3c1c61d1b71f530969ff3d88a71a7864",
+      "bytes": 71221
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1m/BTCUSDT-1m-2026-10-16.zip",
+      "sha256": "1d2db287ac3749c8adfc763e34cbf3872f3acd47f886cd76851892542c286f4e",
+      "bytes": 69330
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1m/BTCUSDT-1m-2026-10-17.zip",
+      "sha256": "ce5536cff2985e8b1b36c115627c7a30cc8c43d89e2172d5bf5cf3b0dd2fc03a",
+      "bytes": 65267
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1m/BTCUSDT-1m-2026-10-18.zip",
+      "sha256": "7b4d9784e2034cb7a05860d2b67ceb74368eb5d71d8f2e16a04e00e2045cb784",
+      "bytes": 68372
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1m/BTCUSDT-1m-2026-10-19.zip",
+      "sha256": "b2fdee20be764f88cd640d933a492bcdfe833452fff1d6fb87b9ede081e8061b",
+      "bytes": 68956
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1m/BTCUSDT-1m-2026-10-20.zip",
+      "sha256": "d580973ba32d82a94f3669a3472b7a81a4ac598777df8bab88e9ff26d7924c75",
+      "bytes": 69973
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1m/BTCUSDT-1m-2026-10-21.zip",
+      "sha256": "1627cc21691c046cf16fc63011e6d929fcead8dd5509f3fa4e81f630bd9ad5ef",
+      "bytes": 69801
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1m/BTCUSDT-1m-2026-10-22.zip",
+      "sha256": "579980a81a1f58e14dfa66463232b7078aa561077d44e943cd3070ebee2ba900",
+      "bytes": 70594
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1m/BTCUSDT-1m-2026-10-23.zip",
+      "sha256": "2055ad6a88a9f2995f6b1f52dde92dbe369f2ef518ee93927b378a3b33d24168",
+      "bytes": 68959
+    },
+    {
+      "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/1m/BTCUSDT-1m-2026-10-24.zip",
+      "sha256": "9c975443231b3bfb0ecbfd95e95d82e56c07a5a12d43198c6ea9234aca254235",
+      "bytes": 67862
+    }
+  ],
+  "market": {
+    "first_open": 77437.13,
+    "last_close": 80888.16,
+    "return_pct": 4.456557209700307,
+    "high": 87395.67,
+    "low": 57800.19,
+    "max_close_drawdown_pct": 30.123797851730373
+  },
+  "assumptions": {
+    "trend": "EMA9/21, Wilder RSI14, warmup100, fixed 1 unit stake, 90% payout, tie refund, next 1m open/close, delay0 and1, no overlap",
+    "breakout": "5m long close>prior20high, volume>=1.5xprior20mean, nextopen, ATR14 stop,2R target,12bar timeout, stop-first,10bp fee+1bp slippage EACH side"
+  },
+  "strategies": {
+    "trend_m1_next_open": {
+      "overall": {
+        "trades": 229741,
+        "wins": 108466,
+        "losses": 111455,
+        "ties": 9820,
+        "win_rate": 0.4721229558502836,
+        "mean": -0.06022259849134459,
+        "total": -13835.599999999997,
+        "max_drawdown": 13844.500000027328,
+        "profit_factor": 0.8758638015342516
+      },
+      "first_four_months": {
+        "trades": 153467,
+        "wins": 72120,
+        "losses": 75007,
+        "ties": 6340,
+        "win_rate": 0.469938162601732,
+        "mean": -0.06580567809366182,
+        "total": -10098.999999999998,
+        "max_drawdown": 10108.600000014185,
+        "profit_factor": 0.8653592331382405
+      },
+      "last_two_months": {
+        "trades": 76274,
+        "wins": 36346,
+        "losses": 36448,
+        "ties": 3480,
+        "win_rate": 0.476518866192936,
+        "mean": -0.04898917062170594,
+        "total": -3736.599999999999,
+        "max_drawdown": 3740.4999999977845,
+        "profit_factor": 0.8974813432835821
+      },
+      "monthly": {
+        "2026-04": {
+          "trades": 7389,
+          "wins": 3327,
+          "losses": 3709,
+          "ties": 353,
+          "win_rate": 0.45026390580592773,
+          "mean": -0.09672486128028149,
+          "total": -714.6999999999999,
+          "max_drawdown": 725.600000000045,
+          "profit_factor": 0.8073065516311675
+        },
+        "2026-05": {
+          "trades": 39052,
+          "wins": 18328,
+          "losses": 19171,
+          "ties": 1553,
+          "win_rate": 0.4693229540100379,
+          "mean": -0.06851889787975006,
+          "total": -2675.7999999999997,
+          "max_drawdown": 2687.2999999992335,
+          "profit_factor": 0.86042459965573
+        },
+        "2026-06": {
+          "trades": 37707,
+          "wins": 18196,
+          "losses": 19034,
+          "ties": 477,
+          "win_rate": 0.4825629193518445,
+          "mean": -0.07048028217572333,
+          "total": -2657.5999999999995,
+          "max_drawdown": 2676.8999999991,
+          "profit_factor": 0.8603761689608069
+        },
+        "2026-07": {
+          "trades": 39034,
+          "wins": 18478,
+          "losses": 19206,
+          "ties": 1350,
+          "win_rate": 0.47338217963826407,
+          "mean": -0.06598862530101961,
+          "total": -2575.7999999999997,
+          "max_drawdown": 2581.299999998985,
+          "profit_factor": 0.8658856607310216
+        },
+        "2026-08": {
+          "trades": 38986,
+          "wins": 17970,
+          "losses": 18111,
+          "ties": 2905,
+          "win_rate": 0.46093469450572,
+          "mean": -0.04971015236238649,
+          "total": -1937.9999999999995,
+          "max_drawdown": 1947.4999999993759,
+          "profit_factor": 0.8929932085472917
+        },
+        "2026-09": {
+          "trades": 37585,
+          "wins": 18031,
+          "losses": 18003,
+          "ties": 1551,
+          "win_rate": 0.47973925768258613,
+          "mean": -0.047228947718504714,
+          "total": -1775.0999999999997,
+          "max_drawdown": 1798.6999999994061,
+          "profit_factor": 0.9013997667055491
+        },
+        "2026-10": {
+          "trades": 29988,
+          "wins": 14136,
+          "losses": 14221,
+          "ties": 1631,
+          "win_rate": 0.47138855542216884,
+          "mean": -0.04997332266239828,
+          "total": -1498.5999999999997,
+          "max_drawdown": 1510.199999999898,
+          "profit_factor": 0.8946206314605161
+        }
+      },
+      "holdout_uncertainty": {
+        "seed": 19,
+        "replays": 10000,
+        "mean_per_trade_95pct_day_bootstrap": [
+          -0.05479687602546431,
+          -0.04293617243358905
+        ]
+      }
+    },
+    "trend_m1_delayed_open": {
+      "overall": {
+        "trades": 119836,
+        "wins": 56536,
+        "losses": 58266,
+        "ties": 5034,
+        "win_rate": 0.47177809673220067,
+        "mean": -0.061614206081644904,
+        "total": -7383.5999999999985,
+        "max_drawdown": 7394.900000008479,
+        "profit_factor": 0.8732777262897745
+      },
+      "first_four_months": {
+        "trades": 79990,
+        "wins": 37679,
+        "losses": 39073,
+        "ties": 3238,
+        "win_rate": 0.4710463807975997,
+        "mean": -0.06453181647705962,
+        "total": -5161.899999999999,
+        "max_drawdown": 5165.900000001669,
+        "profit_factor": 0.8678908709338929
+      },
+      "last_two_months": {
+        "trades": 39846,
+        "wins": 18857,
+        "losses": 19193,
+        "ties": 1796,
+        "win_rate": 0.4732470009536716,
+        "mean": -0.05575716508557947,
+        "total": -2221.6999999999994,
+        "max_drawdown": 2234.4999999991724,
+        "profit_factor": 0.8842442557182306
+      },
+      "monthly": {
+        "2026-04": {
+          "trades": 3867,
+          "wins": 1792,
+          "losses": 1887,
+          "ties": 188,
+          "win_rate": 0.4634083268683734,
+          "mean": -0.07090768037238168,
+          "total": -274.19999999999993,
+          "max_drawdown": 280.69999999999493,
+          "profit_factor": 0.8546899841017488
+        },
+        "2026-05": {
+          "trades": 20369,
+          "wins": 9661,
+          "losses": 9873,
+          "ties": 835,
+          "win_rate": 0.47429918012666306,
+          "mean": -0.05783789091266139,
+          "total": -1178.0999999999997,
+          "max_drawdown": 1185.6999999999769,
+          "profit_factor": 0.8806745670009115
+        },
+        "2026-06": {
+          "trades": 19678,
+          "wins": 9435,
+          "losses": 9997,
+          "ties": 246,
+          "win_rate": 0.4794694582782803,
+          "mean": -0.07650675881695293,
+          "total": -1505.4999999999998,
+          "max_drawdown": 1518.0999999998373,
+          "profit_factor": 0.8494048214464339
+        },
+        "2026-07": {
+          "trades": 20351,
+          "wins": 9638,
+          "losses": 10011,
+          "ties": 702,
+          "win_rate": 0.4735885214485775,
+          "mean": -0.06568718981868212,
+          "total": -1336.7999999999997,
+          "max_drawdown": 1368.99999999986,
+          "profit_factor": 0.8664668864249326
+        },
+        "2026-08": {
+          "trades": 20276,
+          "wins": 9295,
+          "losses": 9551,
+          "ties": 1430,
+          "win_rate": 0.45842375221937265,
+          "mean": -0.05846813967251922,
+          "total": -1185.4999999999998,
+          "max_drawdown": 1195.9000000000158,
+          "profit_factor": 0.8758768715317767
+        },
+        "2026-09": {
+          "trades": 19651,
+          "wins": 9322,
+          "losses": 9515,
+          "ties": 814,
+          "win_rate": 0.4743778942547453,
+          "mean": -0.057259172561192805,
+          "total": -1125.1999999999998,
+          "max_drawdown": 1136.300000000066,
+          "profit_factor": 0.8817446137677353
+        },
+        "2026-10": {
+          "trades": 15644,
+          "wins": 7393,
+          "losses": 7432,
+          "ties": 819,
+          "win_rate": 0.47257734594732803,
+          "mean": -0.0497507031449757,
+          "total": -778.2999999999998,
+          "max_drawdown": 795.6000000000857,
+          "profit_factor": 0.8952771797631862
+        }
+      },
+      "holdout_uncertainty": {
+        "seed": 19,
+        "replays": 10000,
+        "mean_per_trade_95pct_day_bootstrap": [
+          -0.06513982763386014,
+          -0.0460018555201725
+        ]
+      }
+    },
+    "breakout_m5_spot": {
+      "overall": {
+        "trades": 1142,
+        "wins": 198,
+        "losses": 944,
+        "ties": 0,
+        "win_rate": 0.1733800350262697,
+        "mean": -2.3837222983428767,
+        "total": -2722.2108647075656,
+        "max_drawdown": 2722.210864707562,
+        "profit_factor": 0.049708670883953074
+      },
+      "first_four_months": {
+        "trades": 771,
+        "wins": 132,
+        "losses": 639,
+        "ties": 0,
+        "win_rate": 0.17120622568093385,
+        "mean": -2.3766527987963304,
+        "total": -1832.3993078719707,
+        "max_drawdown": 1833.6207483300216,
+        "profit_factor": 0.05050233136667916
+      },
+      "last_two_months": {
+        "trades": 371,
+        "wins": 66,
+        "losses": 305,
+        "ties": 0,
+        "win_rate": 0.1778975741239892,
+        "mean": -2.3984138998264006,
+        "total": -889.8115568355947,
+        "max_drawdown": 891.7219343786714,
+        "profit_factor": 0.04807008992490556
+      },
+      "monthly": {
+        "2026-04": {
+          "trades": 41,
+          "wins": 3,
+          "losses": 38,
+          "ties": 0,
+          "win_rate": 0.07317073170731707,
+          "mean": -2.257651735851054,
+          "total": -92.56372116989321,
+          "max_drawdown": 92.56372116989321,
+          "profit_factor": 0.013399966744723291
+        },
+        "2026-05": {
+          "trades": 193,
+          "wins": 29,
+          "losses": 164,
+          "ties": 0,
+          "win_rate": 0.15025906735751296,
+          "mean": -2.2319667754215002,
+          "total": -430.76958765634953,
+          "max_drawdown": 430.7695876563495,
+          "profit_factor": 0.041376993043782645
+        },
+        "2026-06": {
+          "trades": 155,
+          "wins": 37,
+          "losses": 118,
+          "ties": 0,
+          "win_rate": 0.23870967741935484,
+          "mean": -1.39718040366052,
+          "total": -216.5629625673806,
+          "max_drawdown": 216.56296256738068,
+          "profit_factor": 0.12774943797868998
+        },
+        "2026-07": {
+          "trades": 204,
+          "wins": 41,
+          "losses": 163,
+          "ties": 0,
+          "win_rate": 0.20098039215686275,
+          "mean": -2.147562992887814,
+          "total": -438.10285054911407,
+          "max_drawdown": 438.9612910463779,
+          "profit_factor": 0.05598092302231304
+        },
+        "2026-08": {
+          "trades": 220,
+          "wins": 31,
+          "losses": 189,
+          "ties": 0,
+          "win_rate": 0.1409090909090909,
+          "mean": -3.3307814417612027,
+          "total": -732.7719171874646,
+          "max_drawdown": 732.7719171874649,
+          "profit_factor": 0.03525127458293337
+        },
+        "2026-09": {
+          "trades": 194,
+          "wins": 41,
+          "losses": 153,
+          "ties": 0,
+          "win_rate": 0.211340206185567,
+          "mean": -2.158312116258779,
+          "total": -418.7125505542031,
+          "max_drawdown": 419.9593611833409,
+          "profit_factor": 0.0640952190319049
+        },
+        "2026-10": {
+          "trades": 135,
+          "wins": 16,
+          "losses": 119,
+          "ties": 0,
+          "win_rate": 0.11851851851851852,
+          "mean": -2.909090926097484,
+          "total": -392.72727502316036,
+          "max_drawdown": 392.72727502316053,
+          "profit_factor": 0.023369343253889525
+        }
+      },
+      "holdout_uncertainty": {
+        "seed": 19,
+        "replays": 10000,
+        "mean_per_trade_95pct_day_bootstrap": [
+          -2.851808970085132,
+          -2.00134209452336
+        ]
+      }
+    }
+  },
+  "verification": {
+    "trade_csv_rows": 1142,
+    "spot_gross_mean_r": -0.1052884045626517,
+    "csv_sha256": {
+      "breakout_m5_spot.csv": "ee7fab7b5cd72e027db5037c3a0c9b68a2bb977f30268e8812a3a9d01e980978",
+      "daily.csv": "fbf377d5c0c2ae77dff14af2cf6239e6dc5cacffc3fc7fe6498cb8b57a4c4eef",
+      "trend_m1_delayed_open.csv": "344c480e0853a0f59e6fd3d6d3d9b170a29cc4b386b2a75fb5e9cec9960f6d85",
+      "trend_m1_next_open.csv": "b00c5280990dde3ea454c3b4eabc060da50b8fe15302d09373fcbd8d6695e376"
+    }
+  }
+}
