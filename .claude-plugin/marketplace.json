@@ -1,18 +1,17 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "day-trader-skill",
-  "description": "The Day Trader skill pack for Claude: the Trader skill v2",
+  "description": "Bitcoin research adaptation of Day Trader",
   "owner": {
-    "name": "Jake Schincariol",
-    "url": "https://opusjake.ai"
+    "name": "victordm6"
   },
   "plugins": [
     {
       "name": "day-trader-skill",
-      "description": "Eleven Claude skills for day trading: a chart scanner, a news monitor, an entry timer, an exit planner, a time machine that replays 10,000 sessions, a risk manager, a budget manager, an order executor (paper by default, never without your yes), price alerts, an earnings analyst and a Pelosi tracker.",
+      "description": "Read-only Binance BTCUSDT analysis and continuous 24/7 backtests.",
       "source": "./",
       "category": "productivity",
-      "homepage": "https://github.com/Jakeschincariol/day-trader-skill"
+      "homepage": "https://github.com/victordm6/day-trader-skill"
     }
   ]
 }
