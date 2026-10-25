@@ -42,3 +42,9 @@ Final verification: 350 offline tests passed. A public Binance entry-adapter smo
 2026-10-25: 355 offline tests passed. Five new decision tests exercise malformed evidence (non-object, empty/reversed uncertainty bounds, infinite sample count), 100-trade and 30-day boundaries, exact volume/breakout thresholds, nonfinite observations, provisional-plan rejection and exit evaluation with a corrupt entry-evidence file. Evidence counts now require integers and intervals require two finite ordered endpoints. Exit checks ignore entry-evidence files because that evidence must not block an exit. Provisional reference plans cannot masquerade as actual positions. The backtest self-test passed again.
 
 No strategy parameters were optimized and no new profitability claim is made. The recorded negative historical result still blocks buy candidates. No account access or trades were performed during these tests.
+
+## Investing economic calendar context
+
+2026-10-25: 363 offline tests passed, including eight macro-context tests. Coverage includes explicit offset conversion to UTC, high-impact USD event proximity, stale/future observation rejection, missing event time/importance, incomplete coverage, unexpected source and timezone-naive inputs, both news/analyst adapter routes, and explicit price-source failure. The three revised skills passed validation.
+
+The public calendar was inspected through web browsing; visible extraction did not establish all event times/importance or complete coverage. The implementation therefore uses assisted browser/user observations rather than claiming automatic calendar scraping. No Investing data is redistributed in this repository; test events are synthetic. A fresh local observation is required for calendar status observed; absent input stays unavailable. Binance remains the price source, macro context does not enable buy candidates or alter the negative strategy evidence gate.

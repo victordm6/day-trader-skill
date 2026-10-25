@@ -18,3 +18,5 @@ BTC is not a company. Do not fabricate EPS, revenue, earnings, SEC statements or
 The numeric examples are syntax demonstrations, not personal trade recommendations. Keep data times and provenance in reports. Use only closed candles; no future data, stock-session calendar, whole-share rounding, margin, shorts or Ebinex settlement assumptions. Read [shared workflow](../trader-bitcoin/references/workflow.md) when passing plans, sizing, risk or alerts between modules. Missing personal limits require user input.
 
 No order is submitted by this adapter. Never request credentials. Historical or simulated results are not proof of future profitability.
+
+For Investing.com calendar context alongside Binance price analysis, read [macro context](../trader-bitcoin/references/macro-context.md). Calendar availability is independent of price data and does not validate a trading direction.

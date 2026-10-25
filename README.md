@@ -80,3 +80,13 @@ python trader-exit/btc.py --position position.json --out outputs/exit-decision.j
 ```
 
 Estados: WAIT, BUY_CANDIDATE (somente pesquisa), HOLD e SELL_EXIT (saida de compra, nao venda a descoberto). O historico registrado foi desfavoravel: media de -2,37R nas 378 operacoes do trecho final, apos custos ilustrativos. Portanto a evidencia fornecida bloqueia candidatos de compra. Nao foi encontrada vantagem validada. A saida exige posicao informada pelo usuario e nao executa ordens.
+
+## Contexto macro: Investing.com
+
+Calendario escolhido: https://br.investing.com/economic-calendar . Combinado com candles de preco da Binance em um relatorio de contexto. [Procedimento e esquema](trader-bitcoin/references/macro-context.md).
+
+```sh
+python trader-news/btc.py --context --calendar-json outputs/calendar-observation.json --out outputs/btc-context.json
+```
+
+A leitura do calendario e assistida por navegador: nao ha API privada, scraping automatico ou monitor continuo. Horarios precisam de fuso explicito, observacoes expiram em 10 minutos e cobertura incompleta e identificada. Sem arquivo de observacao, o calendario aparece como indisponivel. O relatorio destaca eventos USD de alta importancia nos proximos 60 minutos quando visiveis. Nao transforma resultado acima/abaixo da previsao em compra/venda de BTC. O preco vem da Binance e o bloqueio historico da regra continua valendo.

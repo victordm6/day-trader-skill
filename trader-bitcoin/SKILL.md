@@ -32,3 +32,5 @@ Exclude warm-up bars from signals. Preserve UTC ordering and prohibit future inf
 Clearly distinguish directly displayed platform results, historical Binance results, simulated fixed-payout results and inferences. Do not merge deposits/withdrawals into trading profit. Do not optimize payout, indicators, expiry or risk size after inspecting results and then call them out-of-sample. Do not automatically open demo or real trades from research. Real-money operations require a separate user action.
 
 Data format and provenance: https://github.com/binance/binance-public-data . Spot archives since 2025 use microseconds; normalize milliseconds or microseconds explicitly. Keep source URLs, hashes, coverage and strategy parameters in the output JSON.
+
+For Investing.com calendar context alongside Binance price analysis, read [macro context](references/macro-context.md). Calendar availability is independent of price data and does not validate a trading direction.

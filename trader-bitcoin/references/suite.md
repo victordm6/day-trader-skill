@@ -5,7 +5,7 @@ Run `python trader-MODULE/btc.py --help` for each module. The 11 adapters share 
 | Module | BTC function | Artifact / boundary |
 |---|---|---|
 | scanner | BTC across 1m/5m/15m/1h; trend, prior20-high breakout and relative volume | btc-scan.json; descriptive, partial failures explicit |
-| news | Bitcoin Core public RSS/Atom announcements, deduplicated | btc-news.json plus persistent seen state; narrow coverage |
+| news | Bitcoin Core announcements plus assisted Investing economic calendar context | btc-news.json / btc-context.json; explicit source and coverage limits |
 | entry | Completed close versus user level | btc-entry.json; not a fresh crossing detector |
 | exit | User entry/stop and reward multiple | btc-plan.json; long spot only |
 | timemachine | Fixed-rule 24/7 historical BTC replay | results.json and trade CSVs; not arbitrary plan Monte Carlo |
@@ -27,3 +27,5 @@ Disclosure input is a JSON array, for example:
 This is a schema example, not an actual disclosure. Exposure must be `direct`, `etf` or `company`. The parser checks fields and records the source but does not independently verify it; inspect the primary source before presenting a disclosure as fact. No automatic Pelosi/Congress or wallet-address attribution exists.
 
 Source documentation: https://developers.binance.com/docs/binance-spot-api-docs/rest-api/market-data-endpoints and https://bitcoincore.org/en/rss.xml . Project announcements are not a comprehensive financial news feed. One-shot snapshots are not streaming. No private endpoints, credentials, real orders, futures or shorts are implemented.
+
+For the user-selected Investing calendar with Binance price context, see [macro-context.md](macro-context.md). Use news/analyst `btc.py --context`; this mode requires fresh visible calendar observations and is not an automated data feed.

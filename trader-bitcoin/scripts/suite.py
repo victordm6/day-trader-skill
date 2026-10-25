@@ -135,6 +135,11 @@ def main():
     if len(sys.argv) < 2 or sys.argv[1] not in MODULES:
         raise SystemExit('Module required: '+', '.join(MODULES))
     module, rest = sys.argv[1], sys.argv[2:]
+    if module in ('news','analyst') and '--context' in rest:
+        import context
+        sys.argv=[sys.argv[0]]+[arg for arg in rest if arg!='--context']
+        context.main()
+        return
     if module == 'entry' and '--strategy' in rest:
         index=rest.index('--strategy')
         if index+1 >= len(rest) or rest[index+1] != 'breakout':
