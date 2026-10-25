@@ -5,6 +5,12 @@ description: Scan Binance BTCUSDT spot on 1m, 5m, 15m and 1h for descriptive tre
 
 # BTC chart scanner
 
+For Ebinex, use `btc.py --venue ebinex --observation FILE` and read the
+[separate fixed-payout workflow](../trader-bitcoin/references/ebinex.md).
+That route reads local observations/confirmed results only; no Binance settlement
+substitution, spot stop/target translation, demo orders or real orders.
+
+
 This is the Bitcoin adapter, active in this fork. Use the shared BTC implementation via `btc.py`; the original stock scripts and [original instructions](references/upstream-SKILL.md) are retained only as legacy reference. Do not run legacy stock workflows for BTC.
 
 From the repository root:

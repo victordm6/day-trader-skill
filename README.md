@@ -1,6 +1,28 @@
-# Day Trader para Bitcoin
+# Day Trader para Bitcoin e pesquisa Ebinex
 
 Fork de [Jakeschincariol/day-trader-skill](https://github.com/Jakeschincariol/day-trader-skill), adaptado para pesquisa de **BTC/USDT spot da Binance**. Licenca MIT e autoria original preservadas.
+
+## Ebinex: modo separado nos 11 modulos
+
+Use `--venue ebinex` para inspecao offline de observacoes BTCUSDX e contabilidade
+de resultados explicitamente confirmados. O padrao sem essa opcao continua sendo
+Binance spot. [Esquema, comandos e limites Ebinex](trader-bitcoin/references/ebinex.md).
+
+```sh
+python trader-entry/btc.py --venue ebinex --observation observacao.json --out outputs/ebinex-check.json
+python trader-analyst/btc.py --venue ebinex --observation observacao.json --ledger comprovantes.json --initial-balance 100 --out outputs/ebinex-results.json
+python -m unittest discover -s tests -p test_ebinex.py -v
+```
+
+Payout, stake, vencimento, modo e horario vem de observacao explicita, nao de
+precos Binance. O exemplo em `trader-bitcoin/examples/ebinex-observation.example.json`
+e sintetico e sempre bloqueado. Entry/exit retornam WAIT; broker permanece desativado,
+inclusive em demo. Risco usa perda integral do stake e taxas informadas, sem ATR.
+Os relatorios separam pendencias, subtotal encerrado e cobertura incompleta.
+
+A Regra 14410 spot de 25h36 nao foi convertida para M1 nem validada na Ebinex.
+Ainda faltam dados de strikes, regras de liquidacao, payouts e execucao para um
+backtest Ebinex. A adaptacao nao cria uma estrategia lucrativa nem envia ordens.
 
 ## Uso
 

@@ -1,0 +1,13 @@
+{
+  "synthetic_example": true,
+  "venue": "ebinex",
+  "product": "digital_fixed_payout",
+  "symbol": "BTCUSDX",
+  "mode": "demo",
+  "observed_at_utc": "2026-10-25T00:00:00Z",
+  "source_kind": "visible_ui_observation",
+  "evidence": "SYNTHETIC SCHEMA EXAMPLE, not a real account observation",
+  "expiry_seconds": 60,
+  "payout_ratio": 0.9,
+  "prepared_stake_usdt": 1
+}

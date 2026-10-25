@@ -1,7 +1,7 @@
 {
   "name": "day-trader-skill",
-  "description": "Eleven integrated Bitcoin adapters plus the BTC research hub: Binance spot analysis, project news, plans, sizing, risk, historical tests, paper tickets and alerts. No live orders.",
-  "version": "4.2.0",
+  "description": "Eleven Bitcoin adapters and research hub with separate offline Ebinex observation and explicit settlement accounting. No demo or real orders.",
+  "version": "4.3.0",
   "author": {
     "name": "Jake Schincariol",
     "url": "https://opusjake.ai"
@@ -14,7 +14,9 @@
     "btc",
     "binance",
     "tradingview",
-    "backtesting"
+    "backtesting",
+    "ebinex",
+    "fixed-payout"
   ],
   "skills": [
     "./trader-bitcoin",

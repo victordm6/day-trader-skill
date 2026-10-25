@@ -132,6 +132,11 @@ def write(path, value):
 
 
 def main():
+    if len(sys.argv) > 2 and sys.argv[1] in MODULES and any(
+            a == '--venue' or a.startswith('--venue=') for a in sys.argv[2:]):
+        import ebinex
+        ebinex.module_main(sys.argv[1], sys.argv[2:])
+        return
     if len(sys.argv) < 2 or sys.argv[1] not in MODULES:
         raise SystemExit('Module required: '+', '.join(MODULES))
     module, rest = sys.argv[1], sys.argv[2:]

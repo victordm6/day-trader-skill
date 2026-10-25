@@ -1,9 +1,16 @@
 ---
 name: trader-bitcoin
-description: Analyze Binance BTCUSDT spot, check completed candles against a level, plan long spot stops and targets, size fractional BTC, check risk budgets, record threshold alerts and backtest 24/7 history. No order execution or Ebinex settlement replication.
+description: Analyze Binance BTCUSDT spot and historical rules, or inspect local Ebinex BTCUSDX observations and confirmed settlements with the separate fixed-payout adapter. No order execution or assumed settlement equivalence.
 ---
 
 # Bitcoin research adapter
+
+For Ebinex requests, read [Ebinex adapter](references/ebinex.md) and use
+`scripts/ebinex.py` or a module's `btc.py --venue ebinex`. Do not route Ebinex
+through spot stops/targets, fractional BTC sizing or Binance settlement prices.
+This mode only inspects supplied visible observations and audits supplied explicit
+results. Missing history means WAIT, not an invented signal or spot equivalence.
+The frozen spot Rule 14410 remains a separate rule. No demo or real orders.
 
 For fixed-rule buy/wait/hold/exit research decisions, read [references/decision.md](references/decision.md). Use `scripts/decision.py`; missing or unfavorable historical evidence must produce WAIT, not an actionable buy. Historical screening is not independent strategy validation. Never fabricate a position from a candidate plan.
 

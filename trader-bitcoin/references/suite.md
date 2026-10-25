@@ -1,5 +1,10 @@
 # Eleven integrated BTC adapters
 
+All eleven modules also accept `--venue ebinex --observation FILE` for the
+separate local fixed-payout workflow. See [Ebinex module map](ebinex.md).
+This route bypasses Binance price fetches and the spot workflow. It does not
+implement Ebinex execution, signals, a news feed or exchange settlement history.
+
 Run `python trader-MODULE/btc.py --help` for each module. The 11 adapters share `trader-bitcoin/scripts/suite.py`, `market.py`, `workflow.py` and `backtest.py`. Original stock tools remain unchanged but are legacy, not the registered skills' execution path. There are 12 registered skills: the hub plus eleven adapters.
 
 | Module | BTC function | Artifact / boundary |

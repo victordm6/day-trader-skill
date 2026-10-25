@@ -8,7 +8,7 @@
   "plugins": [
     {
       "name": "day-trader-skill",
-      "description": "Eleven integrated BTC spot adapters and research hub; local paper tickets only.",
+      "description": "BTC spot research plus separate offline Ebinex observation/settlement analysis; execution disabled.",
       "source": "./",
       "category": "productivity",
       "homepage": "https://github.com/victordm6/day-trader-skill"
